@@ -1,0 +1,17 @@
+/**
+ * @package		Zen Tools
+ * @subpackage	Zen Tools
+ * @author		Joomla Bamboo - design@joomlabamboo.com
+ * @copyright 	Copyright (c) 2013 Copyright (C), Joomlabamboo. All Rights Reserved.. All rights reserved.
+ * @license		license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+ * @version		1.10.2
+ */
+
+.slideshowflat .flex-direction-nav li a {
+	top:0px;
+	z-index:11
+}
+
+.slideshowflat .slide-controller i {
+	display: none;
+}

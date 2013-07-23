@@ -1,0 +1,89 @@
+/* Topwrap
+-----------------------------------------------------------------------------*/
+#topwrap {
+
+	/* Smaller font size */
+	font-size: 90%;
+	
+	/* Small top padding */
+	padding: 10px 0 0;
+	
+	/* Variable for entire bg row */
+	background: @topBG;
+	
+	/* Top border */
+	border-top: @topBorderTop;
+	
+	/* Bottom border */
+	border-bottom: @topBorderBottom;
+	
+	/* Top Text colour */
+	color: @toptextcolor;
+	
+	
+	a {
+		/* The top link colour */
+		color: @toplinkcolor;
+		
+		&:hover {
+			/* The top link hover colour */
+			color: @toplinkcolorhover;
+		}
+	}
+	
+	
+	.zen-container {
+		
+		/* bg on main top container */
+		background: @topContainerBG;
+		
+		/* Top border */
+		border-top: @topContainerTopBorder;
+		
+		/* Bottom border */
+		border-bottom: @topContainerBottomBorder;
+		
+		/* Top row padding */
+		padding: @toprowpadding;
+		
+		&.panel-padding {
+			padding-right: 100px;
+			position:relative
+		}
+		
+	}
+	
+	
+	h1,h2,h3,h4,h5,h6 {
+		color: @topheadingcolor;
+	}
+	
+		ul {
+			
+			margin: 0;
+			
+			li a{
+				float: left;
+				margin: 0 10px 0 0;
+				
+				color:@topLinkColor;
+			
+				&:hover {background:none}
+			}
+		}
+		
+		ul.nav {
+				li.active > a,
+				li.active a:hover {
+					background: none;
+					color: @secondary;
+					padding: 0;
+				}
+		}
+	
+	}
+
+#top4 {
+	ul {float: right}
+	ul li {float: left}
+}

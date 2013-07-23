@@ -1,0 +1,154 @@
+/* Sidebar
+-----------------------------------------------------------------------------*/
+#sidebar-main {
+	
+	/* Applies to sidebar 1 and sidebar 2 */
+	&.sidebar {
+	
+		/* The marker for drop down items */
+		li .dropdown-menu a:after{
+		 	display:none;
+		}
+		
+		
+		
+		ul.nav {
+			/* Clean the first and last list items */
+			.firstchild();
+			.lastchild();
+
+		
+		
+			> li {
+			
+				padding:4px 0;
+			
+				> a {
+					color:@sidebarlinkcolor;
+					background:none;
+					text-shadow:none;
+				
+					&:hover {
+						color:@sidebarlinkColorActive;
+						
+					}
+				}
+				
+				
+				&.active {
+				
+					> a { 
+						color:@sidebarlinkColorActive;
+						text-shadow:none;
+						background:none;
+					
+						&:hover {
+							color:@sidebarlinkColorActive;
+							background:none
+						}
+					}
+				}
+				
+				
+				/* Second level */
+				ul {
+				
+					display: block;
+					position: relative;
+					z-index: 1;
+					font-size:90%;
+					margin:10px 0px 20px;
+					.border-radius(4px);
+					background:none;
+					border:0;
+					.box-shadow(none);
+					padding:4px;
+					clear:both;
+					float:left;
+					width:100%;
+					
+				
+					li {
+					
+						padding:4px 0;
+					
+						a {
+						
+							padding:0 0 0 15px;
+							
+							
+							&:hover {
+								background:none;
+								color:@sidebarlinkColorActive;
+								
+							}
+						
+						}
+						
+						&.active {
+						
+							> a { 
+								text-shadow:none;
+								background:none;
+								color:@sidebarlinkColorActive;
+							
+								&:hover {
+									color:@sidebarlinkColorActive;
+								}
+							}
+						}
+						
+						
+						/* Third Level */
+						ul {
+						
+							font-size:100%;
+							border:0;
+							.box-shadow(none);
+							padding:8px;
+							width:90%;
+							margin:0px 3%;
+							clear:both;
+							float:left;
+							width:94%;
+							left:0;
+						
+							li {
+							
+								padding:0;
+								border:0;
+								list-style-type:disc;
+								margin:0 0 0 40px;
+								font-size:95%;
+								
+							
+								a {
+									padding:0;
+									&:hover {
+										
+									}
+								}
+								
+								&.active {
+								
+									a { 
+										text-shadow:none;
+										color:@sidebarlinkColorActive;
+										
+										&:hover {
+											
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		
+		
+			
+	
+		}
+	}
+}

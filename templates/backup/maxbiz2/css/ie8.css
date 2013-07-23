@@ -1,0 +1,11 @@
+#bannerwrap .zen-container {
+	margin-left: 0% !important;
+}
+
+#breadcrumb ul li {
+	padding-top: 10px;
+}
+
+img {
+	max-width: 100%;
+}

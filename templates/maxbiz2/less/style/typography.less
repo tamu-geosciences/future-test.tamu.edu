@@ -1,0 +1,221 @@
+
+
+/* Typography
+-----------------------------------------------------------------------------*/
+h1 {
+	margin:10px 0;
+  font-size: @baseFontSize * 2;
+  line-height: @baseLineHeight * 2;
+  small {
+    font-size: @baseFontSize * 2;
+  }
+}
+
+h2 {
+	margin:10px 0;
+  font-size: @baseFontSize * 1.8; 
+  line-height: @baseLineHeight * 1.8;
+  small {
+    font-size: @baseFontSize * 1.5;
+  }
+}
+
+h3 {
+	margin:10px 0;
+  font-size: @baseFontSize * 1.2; 
+  line-height: @baseLineHeight * 1.2; 
+  small {
+    font-size: @baseFontSize + 2px;
+  }
+}
+
+h4 {
+	margin:10px 0;
+  font-size: @baseFontSize + 2px; 
+  line-height: @baseLineHeight;
+  small {
+    font-size: @baseFontSize;
+  }
+}
+
+h5 {
+	margin:10px 0;
+	font-size: @baseFontSize + 1px; 
+	line-height: @baseLineHeight; 
+	  small {
+	    font-size: @baseFontSize - 2px;
+	  }
+}
+
+h6 {
+	margin:10px 0;
+ 	font-size: @baseFontSize; 
+ 	line-height: @baseLineHeight; 
+}
+
+
+
+/* Content Classes
+-----------------------------------------------------------------------------*/
+h2.article-title,
+h1.article-title {
+	margin: 0;
+	border-bottom: 1px solid @minorborderColor
+}
+
+
+
+h1.article-title,
+h2.article-title {
+	.reset;
+	.dividerstyle();
+	border-bottom: 1px solid @minorborderColor;
+	margin-bottom: 0;
+	padding-bottom: 10px;
+}
+
+
+
+/* Divider used across most themes
+-----------------------------------------------------------------------------*/
+
+.divider {
+	.dividerstyle;
+	border-bottom: 1px solid @minorborderColor;
+	margin: 30px 0;
+}
+
+
+
+/* Paragraph
+-----------------------------------------------------------------------------*/
+p {
+  margin: 0 0 @baseLineHeight / 1;
+  	line-height: @baseLineHeight * 1.2;
+  small, .small {
+    font-size: @T3smallerFontSize;
+    color: @grayLight;
+  }
+}
+
+
+
+
+/* Emphasis and Misc
+-----------------------------------------------------------------------------*/
+
+small {
+  font-size: 85%; // Ex: 14px base font * 85% = about 12px
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+cite {
+  font-style: normal;
+}
+
+.muted {
+  color: @grayLight;
+}
+
+.highlight {
+  background-color: #FFC;
+  font-weight: bold;
+  padding: 1px 4px;
+}
+
+
+
+/* Links
+-----------------------------------------------------------------------------*/
+
+body a {
+
+	text-decoration: none;
+	color: @linkColor;
+}
+
+a:hover {
+	color: @linkColorHover;
+	background: none 
+}
+
+code {
+	display: block;
+	max-height: 400px;
+	overflow: scroll;
+	margin: 20px 0;
+}
+
+
+body {
+	h1,
+	h1 a,
+	h2,
+	h2 a,
+	.moduletable h3,
+	h4,
+	h5,
+	h6	{
+		color: @headingsColor
+	}
+}
+
+
+
+/* Reset JB Type blockquotes
+-----------------------------------------------------------------------------*/
+blockquote {
+	font-size:2em;
+	line-height: 2em;
+	padding-left: 10px
+}
+
+blockquote,
+blockquote p,
+.jb_quoteleft,
+.jb_quoteleft p,
+.jb_quoteright,
+.jb_quoteright p  {
+	background-image: none !important;
+	padding-left: 10px !important
+}
+
+blockquote,
+.jb_quoteleft,
+.jb_quoteright {
+	border-left:4px solid #eee
+}
+
+
+/* More Styles
+-----------------------------------------------------------------------------*/
+.headline{
+	text-align: center;
+	border-top:1px solid @minorborderColor;
+	color: darken(@textColor, 15%);
+	margin-bottom:0;
+	clear:both;
+	margin-top: 30px;
+	padding-top: 10px;
+}
+
+
+.subheading {
+	text-align:center;
+	font-weight: bold;
+	font-style: italic;
+	border-bottom: 1px solid @minorborderColor;
+	padding-bottom: 8px;
+	color: lighten(@textColor, 30%);
+	margin-bottom:30px;
+	font-size: 90%
+}
+
+

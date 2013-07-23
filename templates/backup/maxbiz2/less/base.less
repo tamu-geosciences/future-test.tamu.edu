@@ -1,0 +1,203 @@
+/* Styles that need to be reset before we proceed
+-----------------------------------------------------------------------------*/
+
+
+/* Reset Items */
+#navwrap  .navbar-inner,
+#breadcrumb {
+	.reset
+}
+/* Reset the margin on menu items - Not really sure why this is necessary */
+ul, menu, dir{
+padding-left: 0;
+-webkit-margin-before: 0em;
+-webkit-margin-after: 0em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+-webkit-padding-start: 0px;
+}
+
+div,ul,li{
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box;
+  }
+  
+  .span12 {margin: 0 !important}
+  .hidden {display: none !important}
+  
+  
+/* Reset DD things in Joomla */
+dd {padding: 0;margin: 0}
+
+
+/* Indent on ul */
+ul {
+	margin-left: 16px;
+}
+
+
+/* Sidebar margin ul reset */
+.sidebar ul,.items-more ol {
+	margin-left: 0;padding: 0;
+}
+
+
+/* Dont like Hr styling */
+hr {
+	border: 0;
+}
+
+
+/* Puts default margin on content items */
+article{
+	margin:0;
+	padding:0
+}
+
+
+html > body {
+	background:@bodyBackground;
+	font-size:@baseFontSize;
+	margin: 0;
+}
+
+
+/* Tools
+-----------------------------------------------------------------------------*/
+.floatleft {float: left;margin: 0 3% 30px 0}
+.floatright {float: right;margin: 0 0 30px 3%}
+.divider {.clearfix}
+
+/* A legacy rule because we used clear so much before */
+.clear {.clearfix}
+
+/* Position on nav and logo etc */
+.zenleft{float: left;}
+.zencenter {float: none;text-align: center}
+.zenright {float: right}
+
+
+/* Modal
+-----------------------------------------------------------------------------*/
+.modalmodule {margin-bottom:30px}
+.modal-header h3 {display:inline}
+.modal .zen-module-body {padding:20px 3% 30px}
+
+
+
+/* Tab spacing
+-----------------------------------------------------------------------------*/
+.tab-content {margin-top: 20px}
+
+
+
+
+/* Old grid css for backwards compatibility and Jb Type grid syntax
+-----------------------------------------------------------------------------*/
+.grid_one,.grid_two,.grid_three,.grid_four,.grid_five,.grid_six,.grid_seven,.grid_eight,.grid_nine,.grid_ten,.grid_eleven,.grid_3,.grid_4,.grid_2,.grid_1,.grid_5,.grid_7,.grid_8,.grid_9,.grid_10,.grid_11,
+#navwrap li.grid_4
+{
+margin-right: 3.8%;
+float: left;
+position: relative;
+min-height: 1px
+}
+
+.grid_one
+{
+width: 4.85%
+}
+
+.grid_11 {
+width: 5.7%;
+}
+
+.grid_10 {
+width: 6.7%;
+}
+
+.grid_9 {
+width: 7.9%;
+}
+
+.grid_8 {
+width: 9.3%;
+}
+
+.grid_7 {
+width: 11.1%;
+}
+
+.grid_two
+{
+width: 13.45%
+}
+
+.grid_5 {
+width: 17%;
+}
+
+.grid_three,.grid_4
+{
+width: 22.05%
+}
+
+#navwrap li.grid_4 {width:22.05% !important}
+
+.grid_four,.grid_3
+{
+width: 30.75%
+}
+
+.grid_five
+{
+width: 39.45%
+}
+
+.grid_six,.grid_2
+{
+width: 48%
+}
+
+.grid_seven
+{
+width: 56.75%
+}
+
+.grid_eight
+{
+width: 65.4%
+}
+
+.grid_nine
+{
+width: 74.05%
+}
+
+.grid_ten
+{
+width: 82.7%
+}
+
+.grid_eleven
+{
+width: 91.35%
+}
+
+.grid_twelve,grid_,.grid_1
+{
+width: 100%;
+float: left
+}
+
+.zenlast,.jblast  {
+float: right;margin: 0;
+}
+
+
+#navwrap {	
+	[class^="icon-"] {
+		background:none
+	}
+}

@@ -1,0 +1,74 @@
+/* Footer
+-----------------------------------------------------------------------------*/
+
+#footerwrap {
+
+		float: left;
+		width: 100%;
+		
+		/* Smaller font size */
+		font-size: 90%;
+				
+		/* Variable for entire bg row */
+		background: @footerBG;
+		
+		/* footer border */
+		border-footer: @footerBorderfooter;
+		
+		/* Top border */
+		border-top: @footerBorderTop;
+		
+		/* footer Text colour */
+		color: @footertextcolor;
+		
+		margin:30px 0;
+		
+		a {
+			/* The footer link colour */
+			color: @footerlinkcolor;
+			
+			&:hover {
+				/* The footer link hover colour */
+				color: @footerlinkcolorhover;
+				
+				background: none
+			}
+		}
+		
+		ul li {
+			.flatlist;
+		}
+		
+		h1,h2,h3,h4,h5,h6 {
+			color: @footerheadingcolor;
+		}
+		
+		
+		.zen-container {
+			
+			/* bg on main footer container */
+			//background: @footerContainerBG;
+			
+			#gradient > .vertical (@navbgcolortop, @navbgcolorbottom);
+			
+			.border-radius(4px);
+			/* footer border */
+			border-top: @footerContainerTopBorder;
+			
+			/* footer border */
+			border-bottom: @footerContainerBottomBorder;
+			
+			/* footer padding */
+			padding: @footerpadding;
+			
+			ul {margin:0}
+
+			
+		}
+}
+
+
+
+/* Copyright
+-----------------------------------------------------------------------------*/
+#zen-copyright {float: right}

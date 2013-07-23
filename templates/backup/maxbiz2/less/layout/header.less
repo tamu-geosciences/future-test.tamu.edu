@@ -1,0 +1,48 @@
+/* Header
+-----------------------------------------------------------------------------*/
+#headerwrap {
+	
+		/* Variable for entire bg row */
+		background: @headerBG;
+		
+		/* Bottom border */
+		border-bottom: @headerBorderBottom;
+		
+		/* Top border */
+		border-top: @headerBorderTop;
+		
+		/* header Text colour */
+		color: @headertextcolor;
+		
+		
+		a {
+			/* The header link colour */
+			color: @headerlinkcolor;
+			
+			&:hover {
+				/* The header link hover colour */
+				color: @headerlinkcolorhover;
+			}
+		}
+		
+		h1,h2,h3,h4,h5,h6 {
+			color: @headerheadingcolor;
+		}
+		
+		
+		.zen-container {
+			
+			/* bg on main header container */
+			background: @headerContainerBG;
+			
+			/* header border */
+			border-header: @headerContainerTopBorder;
+			
+			/* Bottom border */
+			border-bottom: @headerContainerBottomBorder;
+			
+			/* Header padding */
+			padding: @headerpadding;
+			
+		}
+}

@@ -1,0 +1,135 @@
+@media (min-width: 320px) and (max-width: @navbarCollapseWidth) {
+
+
+	/* Makes all grid positions 100% in width on small browsers */
+
+	.grid_one,
+	.grid_two,
+	.grid_three,
+	.grid_four,
+	.grid_five,
+	.grid_six,
+	.grid_seven,
+	.grid_eight,
+	.grid_nine,
+	.grid_ten,
+	.grid_eleven,
+	.grid_1,
+	.grid_2,
+	.grid_3,
+	.grid_4 {
+	    width: 100% !important;
+	    margin-bottom: 30px
+	}
+
+
+	/* Now we have to reset the grids in the slideshow */
+
+	.zentools.slideshow .allitems 
+		{
+			.grid_one {
+		    width: 4.85%!important;
+		    margin: 0;
+			}
+	
+			.grid_11 {
+			    width: 5.7% !important;
+			    margin: 0;
+			}
+		
+			.grid_10 {
+			    width: 6.7%!important;
+			    margin: 0;
+			}
+		
+			.grid_9 {
+			    width: 7.9%!important;
+			    margin: 0;
+			}
+		
+			.grid_8 {
+			    width: 9.3%!important;
+			    margin: 0;
+			}
+		
+			.grid_7 {
+			    width: 11.1%;
+			    margin: 0;
+			}
+		
+			.grid_two {
+			    width: 13.45% !important;
+			    margin: 0;
+			}
+		
+			.grid_three {
+			    width: 22.05% !important;
+			    margin: 0;
+			}
+		
+			.grid_four {
+			    width: 30.75%!important;
+			    margin: 0;
+			}
+		
+			.grid_five {
+			    width: 39.45%!important;
+			    margin: 0;
+			}
+		
+			.grid_six {
+			    width: 48%!important;
+			    margin: 0;
+			}
+		
+			.grid_seven {
+			    width: 56.75%!important;
+			    margin: 0;
+			}
+		
+			.grid_eight {
+			    width: 65.4%!important;
+			    margin: 0;
+			}
+		
+			.grid_nine {
+			    width: 74.05%!important;
+			    margin: 0;
+			}
+		
+			.grid_ten {
+			    width: 82.7% !important;
+			    margin: 0;
+			}
+		
+			.grid_eleven {
+			    width: 91.35%
+			}
+		
+			.grid_twelve {
+			    width: 100%;
+			    float: left;
+			}
+	}
+
+	/* Reset on margins applied to grids in slideshow */
+
+	.zentools .column
+		{
+			&.grid_one,
+			&.grid_two,
+			&.grid_three,
+			&.grid_four,
+			&.grid_five,
+			&.grid_six,
+			&.grid_seven,
+			&.grid_eight,
+			&.grid_nine,
+			&.grid_ten,
+			&.grid_eleven,
+			&.grid_twelve{
+			    margin: 0 !important
+			}
+	}
+
+}

@@ -1,0 +1,79 @@
+/* Logged In
+-----------------------------------------------------------------------------*/
+
+span.icon-user {
+	background:none;
+
+	&:before {
+		margin-top:4px
+	}	
+}
+
+
+.article-aside {
+	
+	.btn-group{
+		margin-top:10px;
+		margin-right:0px;
+		margin-bottom:30px;
+	}
+
+	i {
+		background:none;
+		
+		&:before {margin-top:4px}
+	}
+	
+	.btn  {border:0;
+		&:hover {
+			border:0;
+			color:@linkColorHover
+		}
+	}
+	.btn-group.open .btn.dropdown-toggle,.btn:focus {
+		background:none;.box-shadow(none)}
+	
+	.dropdown-menu {
+	margin-top:9px !important;
+
+		margin-right:-15px !important;
+		.border-radius(0);
+		border:0;
+		color:@textColor;
+		background:@mainContainerBG !important;
+		a {color:@textColor;
+			&:hover {
+				color:@linkColorHover;
+				background:none;
+				
+				:before {
+					border:0
+				}
+			}
+		}
+		li {margin:0;padding:0 !important}
+	}
+}ed to reset the clearfix ont he section fo rt
+
+
+.edit {
+	
+	
+	i,.form-actions span {background:none}
+	
+	.pull-right {margin-top:20px}
+	
+	textarea {width:96%}
+	input {margin-right:20px}
+	
+	span :before, i:before {margin-top:4px !important}
+	
+	
+}
+#mainWrap .edit {
+	.nav-tabs li.active a{
+		background:@mainContainerBG !important;
+		border-color: @minorborderColor;
+		border-bottom:1px solid @mainContainerBG
+	}
+}

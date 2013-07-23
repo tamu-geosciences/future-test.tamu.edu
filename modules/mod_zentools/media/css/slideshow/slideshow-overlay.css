@@ -1,0 +1,68 @@
+/**
+ * @package		Zen Tools
+ * @subpackage	Zen Tools
+ * @author		Joomla Bamboo - design@joomlabamboo.com
+ * @copyright 	Copyright (c) 2013 Copyright (C), Joomlabamboo. All Rights Reserved.. All rights reserved.
+ * @license		license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+ * @version		1.10.2
+ */
+
+
+
+/* Slideshow Overlay
+-----------------------------------------------------------------------------*/
+.slideshowoverlay .allitems {
+position:absolute;
+bottom: 0;
+background:rgba(0,0,0,.4);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000,endColorstr=#50000000);
+color:#fff;
+padding:10px 4% !important
+}
+
+.slideshowoverlay h2 a,
+.slideshowoverlay h3 a,
+.slideshowoverlay h4 a,
+.slideshowoverlay strong a{
+color:#fff;margin-bottom: 0;
+}
+
+.slideshowoverlay h2,
+.slideshowoverlay h3,
+.slideshowoverlay h4 {
+	margin: 0;padding: 0;
+}
+
+@media screen and (max-width: 680px)
+{  
+.zentools.slideshow .column,
+.zentools.slideshow .column2,
+.zentools.slideshow .column3 {
+	margin: 0;
+}
+}
+
+
+
+/* Navigation
+-----------------------------------------------------------------------------*/
+.slideshow.slideshowoverlay .slide-controller {
+margin: 0
+}
+
+.slideshowoverlay ul.slidenav {
+	margin-bottom: 10px !important;
+}
+
+
+
+/* Reset image margin in overlay theme
+-----------------------------------------------------------------------------*/
+.slideshow.slideshowoverlay img {
+margin: 0 !important;
+}
+
+
+.slideshow.slideshowoverlay .slide-controller i {
+	display: none;
+}

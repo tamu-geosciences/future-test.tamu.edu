@@ -1,0 +1,62 @@
+/**
+ * @package		Zen Tools
+ * @subpackage	Zen Tools
+ * @author		Joomla Bamboo - design@joomlabamboo.com
+ * @copyright 	Copyright (c) 2013 Copyright (C), Joomlabamboo. All Rights Reserved.. All rights reserved.
+ * @license		license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+ * @version		1.10.2
+ */
+
+/* Accordion
+-----------------------------------------------------------------------------*/
+.zentools .accordion .grid_one,.zentools .accordion .grid_two,.zentools .accordion .grid_three,.zentools .accordion .grid_four,.zentools.accordion .grid_six,.zentools .accordion .grid_eight,.zentools .accordion .grid_twelve {
+width:100%
+}
+
+.zentools.accordion .allitems.container {
+width: 100%;float: left;padding: 0;margin: 10px 0;
+}
+
+.zentools.accordion ul {
+width:98%;
+margin:0
+}
+
+.zentools.accordion .firstitem {
+border-bottom:1px solid #eee;
+cursor:pointer;
+padding: 4px 0;
+}
+
+.zentools.accordion .zentitle.firstitem,
+.zentools.accordion .zentitle.firstitem.open {
+	background-image: none !important;padding-left: 0;
+}
+
+.zentools.accordion .zentitle p {
+	margin: 0;padding: 0 0 8px ;
+}
+
+
+.zentools.accordion .first {
+cursor:pointer;
+border-bottom:1px solid #ddd;
+margin-bottom:20px 
+}
+
+
+/* Accordion
+-----------------------------------------------------------------------------*/
+.zentools.accordion h2{
+margin:0;
+padding:0
+}
+
+.zeninner,.zentools li .zenitem,.zentools.accordion {
+width:100%;
+float:left
+}
+
+.zentools.accordion .zentitle :before { 
+	margin-right: 10px;font-size: 0.7em
+}

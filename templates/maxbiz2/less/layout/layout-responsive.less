@@ -1,0 +1,200 @@
+@media screen and (max-width: 960px)
+{  
+	.zen-container
+	{  max-width: 96% !important}
+	
+	#gradient {
+		.zen-container {
+					padding:10px 0 30px 0 !important
+		}
+	}
+	
+	#bannerwrap {
+	
+		.zen-container {
+			margin:0 0 0 10px !important;
+			width:100%;
+			max-width:100% !important
+		}
+	}
+	
+	#main-area.span12 {
+		.zen-container {
+			width: 96%;
+			margin: 0 2%;
+		}
+	}
+	
+
+	
+}
+
+@media (min-width:768px) and (max-width:979px){ 
+
+
+
+}
+
+@media (min-width: 700px) and (max-width: 1200px) {
+		
+}
+
+@media (min-width: 320px) and (max-width: 699px) {
+		#topwrap {
+			
+			.zen-container.panel-padding {
+				padding-right: 0;
+			}
+		}
+}
+
+@media (min-width: 320px) and (max-width: @navbarCollapseWidth) {
+
+	html > body {
+		margin:0;
+		padding:0;
+		width:100%
+	}
+	
+	#mainWrap .zen-container {
+		padding-top: 0;
+	}
+
+	
+
+	#top4 ul {
+		float: left;
+	}
+	
+	#search {margin-top:40px}
+	
+	
+	
+	#tabwrap .nav-tabs {
+		
+			margin: 0 !important;
+		
+		li {
+	
+				margin:0 10px 0px 0 !important;
+				
+				&.active a {
+					margin:0 2px;
+					background:@primary !important;
+					color:#fff
+				}
+	
+			}
+	}	
+			
+	#mainWrap {
+
+		
+		.sidebar {
+			background: none;padding: 0;
+		}
+
+	}
+	
+	
+	#paneltrigger {
+
+		left:auto;
+		right: 0px;
+		z-index: 1000;
+
+		width: auto;
+		
+		
+		a {
+			.border-radius(100px);
+			
+			
+			background: none;
+			
+			color: @togglemenubuttoncolor;
+	
+			display:inline-block;
+			
+			&:hover {
+				border-bottom-color: darken(@primary, 20%);
+				background:none;
+				color: @linkColorHover;
+				text-decoration: none;
+			}
+			
+			&:active,
+			&:focus {
+				background: none;
+				outline: none;
+				color: @togglemenubuttoncolor;
+			}
+			
+	
+		}
+		
+		
+	}
+	
+	#main-area {
+	
+		.zen-container {
+			width:100%;
+			padding:30px 0;
+			margin:0 auto
+		}
+		
+	}
+	#tabwrap {
+		
+		ul.nav-tabs {
+		
+			border: 0;
+		
+			li {
+			
+				a {
+				
+					.border-radius(0);
+					border: 1px solid @minorborderColor;
+					margin: 4px 0;
+				
+					&:hover {
+						background:@primary;
+						color: #fff;
+						border: 1px solid @minorborderColor;
+					}
+				}
+				
+				&.active a {
+					border: 1px solid @minorborderColor;
+					margin: 4px 0;
+					background: #fff;
+				}
+			}
+		}
+	}
+	
+	#bannerwrap {
+	
+		.zen-container {
+			margin:0 0 0 3% !important;
+			padding-top:0;
+			width:94%;
+			max-width:94% !important
+		}
+	}
+	
+		#sidebar-main {
+			.border-radius(0) !important;
+			border:0 !important
+		}
+	
+
+
+}
+
+@media (min-width: 320px) and (max-width: 620px) {
+	.zen-container {width: 94%}
+
+}

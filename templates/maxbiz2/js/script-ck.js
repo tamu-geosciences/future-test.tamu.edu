@@ -1,0 +1,1 @@
+var $ja=jQuery.noConflict();$ja(document).ready(function(){});

@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'fontello';
+  src: url("font/fontello.eot");
+  src: url("font/fontello.eot?#iefix") format('embedded-opentype'), url("font/fontello.woff") format('woff'), url("font/fontello.ttf") format('truetype'), url("font/fontello.svg#fontello") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.zentools :before{
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  opacity: 0.8;
+/* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+/* Animation center compensation - magrins should be symmetric */
+/* remove if not needed */
+  margin-left: 0.2em;
+/* you can be more comfortable with increased icons size */
+/* font-size: 120%; */
+/* Uncomment for 3D effect */
+/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-plus:before,
+.accordion .firstitem span:before  { content: '\2b'; font-family: 'fontello' !important; } /* '+' */
+.icon-minus:before,
+.accordion .firstitem.open span:before { content: '\2d'; font-family: 'fontello' !important; } /* '-' */
+.icon-left:before { content: '\2190'; font-family: 'fontello' !important; } /* 'â†' */
+.icon-up:before { content: '\2191'; font-family: 'fontello' !important; } /* 'â†‘' */
+.icon-right:before { content: '\2192'; font-family: 'fontello' !important; } /* 'â†’' */
+.icon-down:before { content: '\2193'; font-family: 'fontello' !important; } /* 'â†“' */
+.icon-pause:before,
+.slideshowstandard  a.flex-pause:before  { content: '\2389'; font-family: 'fontello' !important; } /* 'âŽ‰' */
+.icon-stop:before { content: '\25aa'; font-family: 'fontello' !important; } /* 'â–ª' */
+.icon-play:before,
+.slideshowstandard  a.flex-play:before { content: '\25b6'; font-family: 'fontello' !important; } /* 'â–¶' */
+.icon-left-circle:before { content: '\e4a1'; font-family: 'fontello' !important; } /* 'î’¡' */
+.icon-right-circle:before { content: '\e4a2'; font-family: 'fontello' !important; } /* 'î’¢' */
+.icon-up-circle:before { content: '\e4a3'; font-family: 'fontello' !important; } /* 'î’£' */
+.icon-down-circle:before { content: '\e4a4'; font-family: 'fontello' !important; } /* 'î’¤' */
+.icon-down-open:before { content: '\e75c'; font-family: 'fontello' !important; } /* 'îœ' */
+.icon-left-open:before,
+.slideshowstandard ul.flex-direction-nav li :before { content: '\e75d'; font-family: 'fontello' !important; } /* 'î' */
+.icon-right-open:before,
+.slideshowstandard ul.flex-direction-nav li .next:before { content: '\e75e'; font-family: 'fontello' !important; } /* 'îž' */
+.icon-up-open:before { content: '\e75f'; font-family: 'fontello' !important; } /* 'îŸ' */
+
+/* Added for filter view on small screens */ 
+.icon-th-list:before { content: '\2630';font-family: 'fontello' !important; } /* '☰' */
+.icon-circle:before { content: '\f111'; font-family: 'fontello' !important;} /* '' */
+
+/* Reset on some other Zentiools elements */ 
+.zentools.icons li span:before {
+  margin-right: 8px;text-indent: 0;
+}
+
+
+.zentools.accordion .firstitem,.zentools.accordion .firstitem.open  {
+  background: none;
+}

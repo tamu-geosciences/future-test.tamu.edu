@@ -1,0 +1,305 @@
+
+/* Nav
+-----------------------------------------------------------------------------*/
+
+	
+	
+/* Some resets and default values */
+#navwrap{
+	position:relative;
+	float: left;
+	width: 100%;
+	padding:0;
+	.navwrapper {margin:0}
+	
+	background: @navBG;
+	
+
+	
+	
+	.zen-container {
+		border-top:@navTopborderColor;
+		border-bottom:@navBottomborderColor;
+		padding:@navpadding;
+		//background: @navContainerBG;
+		#gradient > .vertical (@navbgcolortop, @navbgcolorbottom);
+		.border-radius(4px 4px 0 0);
+		padding:@navpadding;
+	}
+	
+	.separator {
+		display:inline-block;
+		float:none !important
+	}
+	
+	/* Menus to the right */
+	.zenright ul {float: right}
+	
+	/* Menus to the left */
+	.zenleft ul {float: left}
+	
+	/* menus int he middle */
+	.zencenter ul 
+		{
+			text-align:center;
+			float:none !important;
+
+			
+		
+			li { 
+				display:inline;
+				float:none !important;
+				
+
+				a,
+				.separator {
+					display:inline-block;
+					float:none !important
+				}
+				li {
+					display:block;
+					float:left!important;
+					text-align: left;
+					width: 100%;
+					text-indent: 0 !important;
+	
+					a {width:100%}
+					
+				}
+
+			}
+	}
+	
+
+	/* Main nav menu
+	-----------------------------------------------------------------------------*/
+	ul.nav{
+			margin-left: 20px;
+			font-size:1em;
+			font-weight: bold;
+			margin-bottom: 0;
+			margin-top: 0 !important;
+			padding: 0;
+			
+				
+			> li {
+				float:left;
+				list-style-type:none;
+				text-align:center;
+				list-style-type: none;
+				.flatlist;
+				
+				margin-right: 0;
+				line-height:3em;
+				
+					
+				/* Top level menu items */
+			 	> a,
+			 	.separator {
+			 		text-transform: none;
+			 		text-align: left;
+			 		font-weight: normal;
+			 		.border-radius(4px);
+			 		border-bottom:0;
+			 		padding: 20px 20px;
+			 		margin: 0;
+			 		text-transform: uppercase;
+			 		text-shadow:none;
+
+			 		margin-left:0px;
+			 		color:@navbarLinkColor;
+			 	
+			 		&:hover {
+			 			background:none;color: @navbarLinkColorHover;
+			 		}
+			 	}
+			 	
+			 	&.active > a,
+			 	&.active .separator {
+			 		color: @navbarLinkColorActive;
+			 		#gradient > .vertical( @navbarLinkBackgroundActive, @darkactive);
+			 		text-align: left;
+			 		.border-radius(0);
+			 		.box-shadow(none)
+			 	}
+			 	
+			 	em {
+			 		font-size: 90%;
+			 	}
+		 		
+
+		 		.dropdown-menu::after {
+		 			border-bottom-color: @dropdownBackground
+		 		}
+		 		 	
+			
+				/* The marker for drop down items */
+			 	&.dropdown > a,
+			 	.separator  {
+				 	background:url(../../images/navparent.png) no-repeat 8px 24px !important}
+				
+				&.active.dropdown > a {
+					background:@navbarLinkBackgroundActive url(../../images/navparent.png) no-repeat 8px 24px !important
+					
+				}
+			
+	
+				/* Remove the default bootstrap styling */
+				b.caret,
+				.dropdown-toggle .caret  {
+					display:none
+				}
+			
+				
+				/* Dropdown menus */
+				ul {
+					
+					/* Padding applied to drop down menu */
+					padding: 8px;
+					
+					/* Remove border on last item */
+					.lastchild();
+					
+					> li {
+					
+						/* Resert Margin if changed above */
+						margin: 0 !important;
+						
+						/* Reset line height if changed above */
+						line-height: 1;
+						
+						/* Border on sub menu items */
+						border-bottom: 1px solid @dropdownLinkBorderColor;
+						
+						/* Padding on sub menu items */
+						padding: 4px 8px;
+						
+						
+							
+							a {
+							
+								/* Link colours on sub menu */
+								color: @dropdownLinkColor;
+								
+								/* Some padding on sub menu items */
+								padding: 4px;
+								
+								&:hover{
+								
+									/* hover style on sub menu items */
+									color: @dropdownLinkColorHover;
+									background: none !important;
+								}
+							}
+							
+							&.active > a {
+							
+								/* Active Menu style */
+								background: none !important;
+								color:@dropdownLinkColorActive;
+								
+								&:hover {
+								
+									/* Active Menu hover */
+									color: @dropdownLinkColorHover;
+									background: none;
+								}	
+							}
+							
+							ul {
+								
+								li {
+								
+									 a { 
+									
+										color: @dropdownLinkColor;
+									
+									}
+									
+									&.active > a {
+										color:@dropdownLinkColorActive;
+									}
+								}
+								
+								
+							}
+						}
+					}
+				}
+			
+	
+	
+			/* Reset on drop down menu */
+			.dropdown-menu {
+			
+				overflow: visible;
+			
+				/* Reset any radii on sub menus */
+				.border-radius(0px);
+				
+				/* Position the drop down menu */
+				margin-top: 0px;
+				margin-left:0px;
+			
+				
+				/* Reset alignment if needed */
+				text-align:left;
+				
+				/* Shadow on drop down menu*/
+			  	.box-shadow( 0 15px 15px rgba(0, 0, 0, 0.1));
+			  	
+			  	
+				/* Sets the colour of text if using mega menu */
+				color: @dropdownColor;
+				
+				/* Headings in the menu */
+				h1,h2,h3,h4,h5,h6 {color:@dropdownColor}
+				
+				border:0;
+				
+			
+				/* Small Adjustments on the sub menu items */
+				ul {width:100%}
+				
+				/* Images in the drop down */
+				img {padding:0;margin:4px}
+			
+			
+			
+				/* Zentools in Mega Menu */
+				.zentools.list li {
+					border: 0 !important;
+					padding: 8px 0;
+				}
+				
+				.zentools.list li:last-child {
+					border-bottom: 0 !important;
+				}
+				
+				span {
+					color: @dropdownColor;
+				}
+			}
+		}
+		
+		/* Need to reset the Dropdown toggle and active bg hover */
+		li.dropdown.open > .dropdown-toggle {
+			background: none !important;
+			color: @navbarLinkColorHover;
+		}
+		
+		li.dropdown.active > .dropdown-toggle,
+		li.dropdown.open.active > .dropdown-toggle,
+		> li.dropdown.open.active > a:hover  {
+			background-color: none !important;
+			color: @navbarLinkColorActive;
+		}
+		
+		.dropdown-menu > li > a:hover,
+		.dropdown-menu > li > a:focus, 
+		.dropdown-submenu:hover > a, 
+		.dropdown-submenu:focus > a {
+			background-image: none;
+		}
+
+}

@@ -1,0 +1,53 @@
+/* Bottom row
+-----------------------------------------------------------------------------*/
+
+#bottomrow {
+
+		float: left;
+		width: 100%;
+		
+		/* Variable for entire bg row */
+		background: @bottomBG;
+		
+		/* Bottom border */
+		border-bottom: @bottomBorderBottom;
+		
+		/* Top border */
+		border-top: @bottomBorderTop;
+		
+		/* bottom Text colour */
+		color: @bottomtextcolor;
+		
+		
+		
+		a {
+			/* The bottom link colour */
+			color: @bottomlinkcolor;
+			
+			&:hover {
+				/* The bottom link hover colour */
+				color: @bottomlinkcolorhover;
+			}
+		}
+		
+		h1,h2,h3,h4,h5,h6 {
+			color: @bottomheadingcolor;
+		}
+		
+		
+		.zen-container {
+			
+			/* bg on main bottom container */
+			background: @bottomContainerBG;
+			
+			/* Bottom border */
+			border-bottom: @bottomContainerBottomBorder;
+			
+			/* Top border */
+			border-top: @bottomContainerTopBorder;
+			
+			/* bottom padding */
+			padding: @bottompadding;
+			
+		}
+}

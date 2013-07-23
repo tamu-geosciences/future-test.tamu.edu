@@ -1,0 +1,164 @@
+/**
+ * @package		Zen Tools
+ * @subpackage	Zen Tools
+ * @author		Joomla Bamboo - design@joomlabamboo.com
+ * @copyright 	Copyright (c) 2013 Joomla Bamboo. All rights reserved.
+ * @license		GNU General Public License version 2 or later
+ * @version		1.10.5
+ */
+
+/* Grid Layout - Can remove in zgf v2
+-----------------------------------------------------------------------------*/
+body.center .container {margin: 0 auto;}
+body.left .container {float: left;}
+body.right .container {float: right;}
+
+.zentools .row {
+width: 94%;
+margin: 0 auto;
+overflow: hidden;
+}
+
+.zentools .container.left .row,.zentools .container.right .row {
+margin: 0;
+}
+
+.zentools .grid_one,.zentools .grid_two,.zentools .grid_three,.zentools .grid_four,.zentools .grid_five,.zentools .grid_six,.zentools .grid_seven,.zentools .grid_eight,.zentools .grid_nine,.zentools .grid_ten,.zentools .grid_eleven,.zentools .grid_3,.zentools .grid_4,.zentools .grid_2,.zentools .grid_1,.zentools .grid_5,.zentools .grid_7,.zentools .grid_8,.zentools .grid_9,.zentools .grid_10,.zentools .grid_11
+{
+margin-right: 3.8%;
+float: left;
+position: relative;
+min-height: 1px
+}
+
+
+
+.zentools .grid_one
+{
+width: 4.85%
+}
+
+.zentools .grid_11 {
+width: 5.7%;
+}
+
+.zentools .grid_10 {
+width: 6.7%;
+}
+
+.zentools .grid_9 {
+width: 7.9%;
+}
+
+.zentools .grid_8 {
+width: 9.3%;
+}
+
+.zentools .grid_7 {
+width: 11.1%;
+}
+
+.zentools .grid_two
+{
+width: 13.45%
+}
+
+.zentools .grid_5 {
+width: 16.2%;
+}
+
+.zentools .grid_three,.grid_4
+{
+width: 22.05%
+}
+
+.zentools .grid_four,.grid_3
+{
+width: 30.75%
+}
+
+.zentools .grid_five
+{
+width: 39.45%
+}
+
+.zentools .grid_six,.grid_2
+{
+width: 48%
+}
+
+.zentools .grid_seven
+{
+width: 56.75%
+}
+
+.zentools .grid_eight
+{
+width: 65.4%
+}
+
+.zentools .grid_nine
+{
+width: 74.05%
+}
+
+.zentools .grid_ten
+{
+width: 82.7%
+}
+
+.zentools .grid_eleven
+{
+width: 91.35%
+}
+
+.zentools .grid_twelve,grid_,.grid_1
+{
+width: 100%;
+float: left;
+position: relative;
+}
+
+.zentools .zenlast, .jblast  {
+float: right;margin: 0;
+}
+
+
+
+.zentools .onecols_push {left: 8.85%;}
+.zentools .twocols_push {left: 17.25%;}
+.zentools .threecols_push {left: 25.85%;}
+.zentools .fourcols_push {left: 60.55%;}
+.zentools .fivecols_push {left: 43.25%}
+.zentools .sixcols_push {left: 51.80%;}
+.zentools .sevencols_push {left: 60.55%;}
+.zentools .eightcols_push {left: 69.20%;}
+.zentools .ninecols_push {left: 77.85%;}
+.zentools .tencols_push {left: 86.5%;}
+.zentools .elevencols_push {left: 94.85%}
+
+.zentools .onecols_pull{left: -8.85%;}
+.zentools .twocols_pull{left: -17.25%;}
+.zentools .threecols_pull{left: -25.85%;}
+.zentools .fourcols_pull{left: -34.55%;}
+.zentools .fivecols_pull{left: -43.25%;}
+.zentools .sixcols_pull {left: -51%;}
+.zentools .sevencols_pull{left: -60.55%;}
+.zentools .eightcols_pull{left: -69.20%;}
+.zentools .ninecols_pull{left: -77.85%;}
+.zentools .tencols_pull{left: -86.25%;}
+.zentools .elevencols_pull{left: -94.85%;}
+
+
+@media only screen and (max-width: 520px) {
+.zentools .grid_3,.zentools .grid_4,.zentools .grid_5,.zentools .grid_7,.zentools .grid_8,.zentools .grid_9,.zentools .grid_10,.zentools .grid_11
+{
+	float: left;
+	width: 100% !important
+}
+}
+
+.zentools .grid_one.isotope-item,.zentools .grid_two.isotope-item,.zentools .grid_three.isotope-item,.zentools .grid_four.isotope-item,.zentools .grid_five.isotope-item,.zentools .grid_six.isotope-item,.zentools .grid_seven.isotope-item,.zentools .grid_eight.isotope-item,.zentools .grid_nine.isotope-item,.zentools .grid_ten.isotope-item,.zentools .grid_eleven.isotope-item,.zentools .grid_3.isotope-item,.zentools .grid_4.isotope-item,.zentools .grid_2.isotope-item,.zentools .grid_1.isotope-item,.zentools .grid_5.isotope-item,.zentools .grid_7.isotope-item,.zentools .grid_8.isotope-item,.zentools .grid_9.isotope-item,.zentools .grid_10.isotope-item,.zentools .grid_11
+{
+margin-right: 0;
+}

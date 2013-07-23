@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>Zen Tools</name>
+	<author>Joomla Bamboo</author>
+	<creationDate>June 25, 2013</creationDate>
+	<copyright>Copyright (c) 2013 Joomla Bamboo. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>design@joomlabamboo.com</authorEmail>
+	<authorUrl>www.joomlabamboo.com</authorUrl>
+	<version>1.10.5</version>
+	<description><![CDATA[Zen Tools makes creating image and content galleries for Joomla simple.<p style="line-height:180%;font-size:1.2em"><a href="http://www.joomlabamboo.com"><img src="http://www.joomlabamboo.com/images/zentoolsSmall.jpg" alt="joomla Bamboo" style="float:left;margin:0 20px 20px 0px;padding:4px;border:1px solid #ddd"/></a><br style="clear:both" /></p><p  style="color:#555">The module features the following layouts:</p>
+	<ul style="color:#777">
+		<li>Grid galleries</li>
+		<li>Responsive Slideshows</li>
+		<li>Responsive Carousels</li>
+		<li>Masonry Layouts</li>
+		<li>Accordions</li>
+		<li>Simple Lists and more</li>
+	</ul>
+	<div style="color:#555">
+		<p>You can use this module to display your Joomla content, your k2 items or even images from a folder.</p>
+		<p>Please ensure you read the documentation contained within the module or via the <a href="http://zentools.joomlabamboo.com">Zentools</a> demo site.</p>
+		<p>Version: 1.10.5</p>
+	</div>
+	]]>
+	</description>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_zentools.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_zentools.sys.ini</language>
+	</languages>
+	<files>
+		<filename module="mod_zentools">mod_zentools.php</filename>
+		<folder>fields</folder>
+		<folder>includes</folder>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<media destination="mod_zentools" folder="media">
+		<folder>cache</folder>
+		<folder>js</folder>
+		<folder>css</folder>
+		<folder>images</folder>
+		<file>index.html</file>
+	</media>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_zentools/fields">
+			<!-- General Settings -->
+			<fieldset name="general" group="general" label="General Settings">
+				<field name="scriptselement" type="scripts" label="" description="" />
+				<field name="layout" type="list" default="1" label="Layout Type" description="Select between content items or a folder containing images.">
+					<option value="grid">Grid</option>
+					<option value="list">List</option>
+					<option value="masonry">Masonry</option>
+					<option value="slideshow">Slideshow</option>
+					<option value="carousel">Carousel</option>
+					<option value="accordion">Accordion</option>
+					<option value="single">Single Item Gallery</option>
+					<option value="leading">Leading item then list</option>
+					<option value="pagination">Pagination</option>
+					<option value="gridfilter">[Preset] Filtered grid</option>
+					<option value="gridtwocol">[Preset] Two column grid</option>
+					<option value="captify">[Preset] Captify content grid</option>
+					<option value="list2col">[Preset] Two column list</option>
+					<option value="list3col">[Preset] Three column list</option>
+					<option value="slideshowOverlay">[Preset] Overlay Slideshow</option>
+					<option value="slideshowFlat">[Preset] Flat Slideshow</option>
+				</field>
+				<field name="setdefault" type="button" id="default" value="Set default options" buttonclass="btn-danger" label="" />
+				<field name="contentSource" type="k2list" class="btn-group" default="2" label="Content Source" description="Select between content items or a folder containing images.">
+					<option value="1">Directory</option>
+					<option value="2">Content</option>
+					<option value="3">K2</option>
+				</field>
+				<field name="count" type="text" default="5" label="Count" description="The number of items to display (default 5)" />
+				<field name="link" type="list" default="0" label="Link Behaviour" description="Choose the action that occurs when an image is clicked. See the demo site for instrtuctions related to the content item and blog category options." >
+					<option value="0">None</option>
+					<option value="1">Lightbox</option>
+					<option value="2">Content item</option>
+					<option value="3">External Links</option>
+				</field>
+				<field name="linktarget" type="list" class="btn-group" default="_self" label="Link Target" description="Choose where the link should open to in the browser window.">
+					<option value="_blank">New Window</option>
+					<option value="_self">Same window</option>
+				</field>
+				<field name="altlink" type="list" class="btn-group" default="0" label="Alternate Link" description="Joomla 2.5 provides the option of specifying additional links to your content item. This option when enabled uses the Link A in the content item as the link for the Read more and title link attached to the content item. If the Link A field is not set then the module will display links in the standard manner." >
+					<option value="0">Use default</option>
+					<option value="1">Use article Link A</option>
+				</field>
+				<field name="extlinks" type="textarea" cols="40" rows="10" default="5" label="Links" description="Enter a url per line in the text area to attach an external link to your items. Please note that this feature does not work with randomly generated content. The urls at th emoment are assigned to the items as they appear in the module eg the first url in the list below relates to the first item shown in the module and so on. If there are more items being displayed in the module than there are links below then the links will return as null." />
+
+				<field name="items" type="sortable" default="1" label="Layout" description="Select between content items or a folder containing images." />
+
+				<field name="useditems" type="hidden" default="" label="Used Items" description="Select between content items or a folder containing images." />
+				<field name="unuseditems" type="hidden" default="" label="Unused Items" description="Select between content items or a folder containing images." />
+
+				<field name="col1Width" type="list" class="btn-group" default="one" label="First Column Width" description="The width assigned to the items up to the first break in the item list.">
+					<option value="one">1</option>
+					<option value="two">2</option>
+					<option value="three">3</option>
+					<option value="four">4</option>
+					<option value="five">5</option>
+					<option value="six">6</option>
+					<option value="seven">7</option>
+					<option value="eight">8</option>
+					<option value="nine">9</option>
+					<option value="ten">10</option>
+					<option value="eleven">11</option>
+					<option value="twelve">12</option>
+				</field>
+				<field name="col2Width" type="list" class="btn-group" default="one" label="Second Column Width" description="The width assigned to the items up to the first break in the item list.">
+					<option value="one">1</option>
+					<option value="two">2</option>
+					<option value="three">3</option>
+					<option value="four">4</option>
+					<option value="five">5</option>
+					<option value="six">6</option>
+					<option value="seven">7</option>
+					<option value="eight">8</option>
+					<option value="nine">9</option>
+					<option value="ten">10</option>
+					<option value="eleven">11</option>
+					<option value="twelve">12</option>
+				</field>
+				<field name="col3Width" type="list" class="btn-group" default="one" label="Third Column Width" description="The width assigned to the items up to the first break in the item list.">
+					<option value="one">1</option>
+					<option value="two">2</option>
+					<option value="three">3</option>
+					<option value="four">4</option>
+					<option value="five">5</option>
+					<option value="six">6</option>
+					<option value="seven">7</option>
+					<option value="eight">8</option>
+					<option value="nine">9</option>
+					<option value="ten">10</option>
+					<option value="eleven">11</option>
+					<option value="twelve">12</option>
+				</field>
+				<field name="col4Width" type="list" class="btn-group" default="one" label="Fourth Column Width" description="The width assigned to the items up to the first break in the item list.">
+					<option value="one">1</option>
+					<option value="two">2</option>
+					<option value="three">3</option>
+					<option value="four">4</option>
+					<option value="five">5</option>
+					<option value="six">6</option>
+					<option value="seven">7</option>
+					<option value="eight">8</option>
+					<option value="nine">9</option>
+					<option value="ten">10</option>
+					<option value="eleven">11</option>
+					<option value="twelve">12</option>
+				</field>
+				<field name="loadJquery" type="list" class="btn-group" default="0" label="Should load jQuery?" >
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+			<fieldset name="imageDirectory" group="imageDirectory" label="Image Source Settings">
+				<field name="directory" type="imagefolderlist" directory="images"  label="Image Directory" description="Directory images will be sourced from - this is the relative directory eg images/stories/." />
+				<field name="random_image" type="list" class="btn-group" default="0" label="Fetch random images" >
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="prefix" type="list" class="btn-group" default="0" label="Order images based on prefix?" description="When enabled the image title are broken into the following elements: image number - title - text - articleid - itemid. When disabled the image title is broken into the following elements: title - text - articleid - itemid. We do this so that you can force the ordering of the images in the folder by adding a suitable alphanumeric prefix to the image title.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="separator" type="text" default="+" label="File name separator character" description="Enter the character you want to use in your file names in order to render a space in the output of the module. As an example a file named A+Happy+Picture.jpg will output in the module as A Happy Picture if the separator is nominated is the + symbol. If you have trouble with the file manager renaming or removing the separator you choose please try using another character to render spaces in the module output." />
+			</fieldset>
+			<fieldset name="content" group="content" label="Content Type Settings">
+				<field name="joomlaContentSource" type="list" class="btn-group" default="categories" label="Joomla Content Source" description="Select the Joomla content Source.">
+					<option value="categories">Categories</option>
+					<option value="items">Items</option>
+				</field>
+				<field name="catid" type="category" extension="com_content" multiple="true" size="5" default="" label="Categories" description="Select the categories you would liek to display.">
+					<option value="">Select All Categories</option>
+				</field>
+				<field name="artids" type="articles" label="Articles" multiple="true" size="20" description="Select the individualitems you would like to display." />
+				<field name="ordering" type="list" default="a.ordering" label="Ordering" description="Ordering options">
+					<option value="a.ordering">Joomla! Ordering</option>
+					<option value="a.hits">Hits</option>
+					<option value="a.title">Title</option>
+					<option value="a.id">ID</option>
+					<option value="a.alias">Alias</option>
+					<option value="a.created">Created Date</option>
+					<option value="modified">Modified Date</option>
+					<option value="publish_up">Start Publishing Date</option>
+					<option value="a.publish_down">Finish Publishing Date</option>
+					<option value="RAND()">Random</option>
+				</field>
+				<field name="ordering_direction" type="list" class="btn-group" default="ASC" label="Ordering Direction" description="Choose to order articles by the above selection option in ascending or descing order." >
+					<option value="ASC">Ascending</option>
+					<option value="DESC">Descending</option>
+				</field>
+				<field name="user_id" type="list" default="0" label="Authors" description="A filter for the authors">
+					<option value="0">Anyone</option>
+					<option value="by_me">Added or modified by me</option>
+					<option value="not_me">Not added or modified by me</option>
+				</field>
+				<field name="show_front" type="list" class="btn-group" default="1" label="Featured Items" description="fieldFRONTPAGEITEMS">
+					<option value="1">Show</option>
+					<option value="2">Featured only</option>
+					<option value="0">Hide</option>
+				</field>
+			</fieldset>
+			<fieldset name="K2" group="k2" label="K2 Item Options" requirement="k2">
+				<field name="k2contentSource" type="list" class="btn-group" default="categories" label="K2 Content Source" description="Select the K2 Item Source." requirement="k2">
+					<option value="categories">Categories</option>
+					<option value="items">Items</option>
+				</field>
+				<field name="category_id" type="k2categories" multiple="true" size="5" default="" label="Categories" description="Select the categories you would liek to display." requirement="k2">
+					<option value="">Select All Categories</option>
+				</field>
+				<field name="getChildren" type="list" class="btn-group" default="0" label="Fetch items from children categories" >
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="itemid" type="k2itemslist" default="" label="K2 Items" description="Select the K2 items you would like to display." requirement="k2" />
+				<field name="FeaturedItems" type="list" class="btn-group" default="1" label="K2_FEATURED_ITEMS" description="">
+					<option value="0">K2_HIDE</option>
+					<option value="1">K2_SHOW</option>
+					<option value="2">K2_SHOW_ONLY_FEATURED_ITEMS</option>
+				</field>
+				<field name="itemsOrdering" type="list" default="" label="K2_ITEM_ORDERING" description="">
+					<option value="">K2_DEFAULT</option>
+					<option value="date">K2_OLDEST_FIRST</option>
+					<option value="rdate">K2_MOST_RECENT_FIRST</option>
+					<option value="alpha">K2_TITLE_ALPHABETICAL</option>
+					<option value="ralpha">K2_TITLE_REVERSEALPHABETICAL</option>
+					<option value="order">K2_ORDERING</option>
+					<option value="rorder">K2_ORDERING_REVERSE</option>
+					<option value="hits">K2_MOST_POPULAR</option>
+					<option value="best">K2_HIGHEST_RATED</option>
+					<option value="comments">K2_MOST_COMMENTED</option>
+					<option value="modified">K2_LATEST_MODIFIED</option>
+					<option value="rand">K2_RANDOM_ORDERING</option>
+				</field>
+				<field name="imagesreplace" type="list" class="btn-group" default="1" label="Display video instead of image" description="">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="videosOnly" type="list" class="btn-group" default="0" label="Fetch only items with videos" description="">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+			<fieldset name="title" group="title" label="Title Options">
+				<field name="titleClass" type="text" default="h2" label="Title Tag" description="Enter the tag to enclose the item title in. eg just add h2 here to have the title be wrapped in an h2 tag." />
+				<field name="titlewordCount" type="text" default="100" label="Character Count" description="Enter the maximum number of words to appear in your title." />
+				<field name="titleSuffix" type="text" default="" label="Title Suffix" description="Enter the suffix you would like to be able to atatch to the end of the title when the title character count is truncated." />
+			</fieldset>
+			<fieldset name="text" group="text" label="Text Options">
+				<field name="wordCount" type="text" default="100" label="Character Count" description="Enter the maximum number of words to appear in your introtext" />
+				<field name="textsuffix" type="text" default="" label="Suffix added to truncated text" description="Enter thecharacters you would liek to append to the introtext of your item in the case that the item's introtext is truncated." />
+				<field name="strip_tags" type="list" class="btn-group" default="1" label="Strip Tags" description="Choose to strips tags from article content." >
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="allowed_tags" type="textarea" filter="raw" cols="30" rows="5" default="&lt;p&gt;&lt;a&gt;&lt;ul&gt;&lt;li&gt;&lt;div&gt;&lt;h1&gt;&lt;h2&gt;&lt;h3&gt;&lt;h4&gt;&lt;h5&gt;&lt;h6&gt;&lt;b&gt;&lt;em&gt;&lt;i&gt;&lt;strong&gt;&lt;blockquote&gt;&lt;dd&gt;&lt;dt&gt;&lt;small&gt;&lt;u&gt;&lt;br&gt;&lt;br /&gt;" label="Allowed Tags" description="This setting defines the tags you want to display in the slideshow. We've created this option primarily to remove images from the output but you can allow or disallow any html entity you like." />
+				<field name="renderPlugin" type="list" class="btn-group" default="strip" label="Plugin Behaviour in Content?" description="Choose how you would like to handle plugin code {} in the content.">
+					<option value="render">Render Plugin</option>
+					<option value="strip">Strip Plugin Code</option>
+				</field>
+			</fieldset>
+			<fieldset name="readmore" group="readmore" label="Readmore">
+				<field name="readonText" type="text" default="More ..." label="Read more text" description="The text used to display when read more is enabled." />
+				<field name="overlayMore" type="list" class="btn-group" default="0" label="Overlay the more button?" description="When enabled this option positions the read more button on top of the other content in the module. For best effect please ensure that the image item is published above the more tag in the list of tags to be displayed in the module.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="animateMoreOverlay" type="list" class="btn-group" default="0" label="Animate more overlay?" description="When enabled the more button will only appear when the user hovers over the item. If this option is disabled it will apear all of the time.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+			<fieldset name="date" group="date" label="Date Settings">
+				<field name="translateDate" type="list" class="btn-group" default="0" label="Use language file?" description="If this option is set to yes the options below are not used. Rather the date is displayed according to your language file.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="dateString" type="list" default="1" label="Translation to use?" description="If this option is set to yes the options below are not used. Rather the date is displayed according to your language file.">
+					<option value="DATE_FORMAT_LC1">DATE_FORMAT_LC1</option>
+					<option value="DATE_FORMAT_LC2">DATE_FORMAT_LC2</option>
+					<option value="DATE_FORMAT_LC3">DATE_FORMAT_LC3</option>
+					<option value="DATE_FORMAT_LC4">DATE_FORMAT_LC4</option>
+				</field>
+				<field name="dateFormat" type="list" default="j M, y" label="Date Format if not using translation method" description="Date format to use if you have set the translate option above to no">
+					<option value="j M, y">15 Sep, 09</option>
+					<option value="M j, y">Sep 15, 09</option>
+					<option value="F j, y">September 15, 09</option>
+					<option value="j F, y">15 September, 09</option>
+					<option value="F j, Y">September 15, 2009</option>
+					<option value="j F, Y">15 September, 2009</option>
+					<option value="j/m/y">15/09/09</option>
+					<option value="l j F, Y">Tuesday 15 September, 2009</option>
+					<option value="D j M, y">Tue 15 Sep, 09</option>
+					<option value="M j">Sep 15</option>
+					<option value="j M">15 Sep</option>
+				</field>
+			</fieldset>
+			<fieldset name="grid" group="grid" label="Grid Settings">
+				<field name="imagesPerRow" type="list" class="btn-group" default="3" label="Number of images per row" description="">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+				</field>
+				<field name="disableMargin" type="list" class="btn-group" default="0" label="Disable margin between grid items?" description="When enabled the default right margin attribute is disabled and the items within the grid will sit directly next to each other.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="overlayGrid" type="list" class="btn-group" default="0" label="Add an overlay effect?" description="When enabled this option implements an overlay effect where the first item sits beneath the other items displayed in the module. This effect is best used when the image is the first item in the list below and when the layout selected is either grid or carousel."	>
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="animateOverlay" type="list" class="btn-group" default="1" label="Animate overlay effect?" description="When enabled any items that are contained within the overlay will appear when the user hovers over the image."	>
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+			<fieldset name="filter" group="filter" label="Filter Options">
+				<field name="categoryFilter" type="list" class="btn-group" default="0" label="Category Filter" description="This option provides a list of the categories that the items in the module are referenced from. When the user clicks on the category title the module either hides or shows the items that are published in that specific category. Please note that this option will only work with the grid and list layout types.">
+					<option value="0">Disabled</option>
+					<option value="1">Enabled</option>
+				</field>
+				<field name="filterstart_joomla" type="category" extension="com_content" multiple="false" default="" label="Active category" description="Select the category that you want to set as active on page load. Leave this field blank to show all items on page load." >
+						<option value="">Select All Categories</option>
+				</field>
+				<field name="filterstart_k2" type="k2categories" multiple="false" default="" label="Active category" description="Select the category that you want to set as active on page load. Leave this field blank to show all items on page load." requirement="k2" />
+				<field name="filterwidth" type="text" default="" label="Filter title width threshold" description="Enter the width that you want to trigger a change from the filter titles from text to icons." />
+			</fieldset>
+			<fieldset name="pagination" group="pagination" label="Pagination settings">
+				<field name="pagStartPage" type="text" default="1" label="Start page" description="The page that is first displayed on page load." />
+				<field name="pagStartRange" type="text" default="3" label="Start range" description="The number of pages to display in the first block of pagination results." />
+				<field name="pagMidRange" type="text" default="3" label="Mid range" description="The number of pages to display in the middle block of pagination results." />
+				<field name="pagEndRange" type="text" default="1" label="End range" description="The number of pages to display in the end block of pagination results." />
+			</fieldset>
+			<fieldset name="imageresize" group="imageresize" label="Image settings">
+				<field type="heading" class="responsiveimageoptions first" title="Image Resize Options" />
+				<field name="resizeImage" type="list" class="btn-group" default="1" label="Resize Images?" description="Set this to yes if you would like to Specify the size of the image.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="option" type="list" default="1" label="Resize Method" description="The method you would like to use when resizing images.">
+					<option value="crop">Smart Resize and Crop</option>
+					<option value="landscape">Landscape Resize and Crop</option>
+					<option value="portrait">Portrait Resize and Crop</option>
+					<option value="auto">Auto Resize and Crop</option>
+					<option value="exact">Exact Resize</option>
+					<option value="topleft">Exact Crop from Top Left</option>
+					<option value="center">Exact Crop from Center</option>
+				</field>
+				<field name="image_width" type="text" default="245" label="Width of the resized image" description="Set the width of the resized image." />
+				<field name="image_height" type="text" default="100" label="Height of the resized image" description="Set the width of the resized image." />
+				<field name="imageTitleAtt" type="list" class="btn-group" default="1" label="Display image title attribute?" description="Set this to yes if you would like to the image to have a title attribute.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field type="heading" class="responsiveimageoptions" title="Target images based on screen size" />
+				<field type="description" default="Please view the &lt;a target='_blank' href='http://docs.joomlabamboo.com/zentools/responsive-image-options'&gt;responsive image option knowledgebase item&lt;/a&gt; for more information about the settings below." />
+				<field name="responsiveimages" type="list" default="0" label="Resize images based on screensize" description="The settings below determine the size of the images that will be used in the module at the various breakpoints listed below. &lt;br /&gt;&lt;br /&gt;If the Resize Image option is enabled above then the default image setting refers to the width and height determined in the settings above.&lt;br /&gt;&lt;br /&gt; However if the resize option is disabled then the default value is equal to the width and height of the original image.  &lt;br /&gt;&lt;br /&gt;">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="sourceImage" type="list" default="Medium" label="Source Image" description="Select the size of image to use as the source image which is loaded on first page load. If there is a javascript issue and the other specified images are unable to load then this will be the default image used for the item.">
+					<option value="Tiny">Tiny</option>
+					<option value="XSmall">Extra Small</option>
+					<option value="Small">Small</option>
+					<option value="Medium">Medium</option>
+					<option value="Default">Default</option>
+					<option value="Large">Large</option>
+					<option value="XLarge">Extra Large</option>
+				</field>
+				<field name="mobile" type="list" default="Medium" label="Phone" description="Select the size of image to be used on phones in portrait view.">
+					<option value="Tiny">Tiny</option>
+					<option value="XSmall">Extra Small</option>
+					<option value="Small">Small</option>
+					<option value="Medium">Medium</option>
+					<option value="Default">Default</option>
+					<option value="Large">Large</option>
+					<option value="XLarge">Extra Large</option>
+				</field>
+				<field name="tabletPortrait" type="list" default="Medium" label="Tablet Portrait" description="Select the size of image to be used for tablets in portrait view.">
+					<option value="Tiny">Tiny</option>
+					<option value="XSmall">Extra Small</option>
+					<option value="Small">Small</option>
+					<option value="Medium">Medium</option>
+					<option value="Default">Default</option>
+					<option value="Large">Large</option>
+					<option value="XLarge">Extra Large</option>
+				</field>
+				<field name="tabletLandscape" type="list" default="Default" label="Tablet Landscape" description="Select the size of image to be used  for tablets in landscape view.">
+					<option value="Tiny">Tiny</option>
+					<option value="XSmall">Extra Small</option>
+					<option value="Small">Small</option>
+					<option value="Medium">Medium</option>
+					<option value="Default">Default</option>
+					<option value="Large">Large</option>
+					<option value="XLarge">Extra Large</option>
+				</field>
+				<field name="desktopImage" type="list" default="Default" label="Desktop" description="Select the size of image to be used for desktop screens.">
+					<option value="Tiny">Tiny</option>
+					<option value="XSmall">Extra Small</option>
+					<option value="Small">Small</option>
+					<option value="Medium">Medium</option>
+					<option value="Default">Default</option>
+					<option value="Large">Large</option>
+					<option value="XLarge">Extra Large</option>
+				</field>
+				<field name="wideImage" type="list" default="Default" label="Widescreen (1281px +)" description="Select the size of image to be used for widescreens.">
+					<option value="Tiny">Tiny</option>
+					<option value="XSmall">Extra Small</option>
+					<option value="Small">Small</option>
+					<option value="Medium">Medium</option>
+					<option value="Default">Default</option>
+					<option value="Large">Large</option>
+					<option value="XLarge">Extra Large</option>
+				</field>
+				<field type="heading" class="responsiveimageoptions" title="Full width image setting" />
+				<field name="fullwidthimage" type="list" default="auto" label="Make images fill 100% of the container." description="When this setting is enabled images will stretch to fit the full width of the parent container. This setting is useful if you are using the responsive image option above but some images are smaller than the breakpoitns specified.">
+					<option value="full">Yes</option>
+					<option value="auto">No</option>
+				</field>
+				<field type="heading" class="k2imageoptions" title="K2 Image Options" requirement="k2" />
+				<field name="itemImgSize" type="k2list" default="Small" label="K2 Image Size" requirement="k2" description="This option determines the source file to be used if your item has an image in the K2 item field. Zentools looks for an image in the k2 item field first and if it exists then it uses that image in the item. If the item does not have an image in the K2 Item field then it will look for an image in the introtext if that image exists. If that image does not exist then it will display a placeholder image according to your settings below. If you want to always use the introtext image then you can set this option introtext image and it will bypass looking for an image in the item field. ">
+					<option value="XSmall">K2_XSMALL</option>
+					<option value="Small">K2_SMALL</option>
+					<option value="Medium">K2_MEDIUM</option>
+					<option value="Large">K2_LARGE</option>
+					<option value="XLarge">K2_XLARGE</option>
+					<option value="introtext">Introtext Image</option>
+				</field>
+				<field type="heading" title="Placeholder image" />
+				<field name="usePlaceholder" type="list" class="btn-group" default="0" label="Use placeholder image?" description="When this settings is enabled a placeholder image is used in the module when an item image is not available. Setting this to no will mean that no image is output in the item if an image is not available.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="placeHolderImage" type="imagelist" default="" label="Placeholder image" description="" directory="images" exclude="" stripext="" />
+				<field type="heading" title="Image border and effect" />
+				<field name="imageEffect" type="list" default="1" label="Image Border?" description="Use this setting to determine the effect to apply to the image in the layout. The rounded and shadow items relate to css3 styles and will not render on browsers that do not support css3. The image can be further styled in your stylesheet by applying the following stylings for their respective styles .zenshadow img, .zenrounded img, .zenborder img.">
+					<option value="zenshadow">Shadow</option>
+					<option value="zenrounded">Rounded</option>
+					<option value="zenroundedshadow">Rounded Shadow</option>
+					<option value="zenborder">Border</option>
+					<option value="noborder">None</option>
+				</field>
+				<field name="imageFade" type="list" class="btn-group" default="0" label="Image fade on hover?" description="When this settings is enabled and the user hovers over the image displayed in the item the image will fade from a full opacity to 0.3 opacity.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="imageFX" type="list" class="btn-group" default="0" label="Add image effect?" description="When this settings is enabled a zoom effect is added to the image when the user hovers over.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="imageGrayscaleFx" type="list" class="btn-group" default="0" label="Add grayscale image effect?" description="When this settings is enabled a color effect is added to the image when the user hovers over.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+			<fieldset name="accordion" group="accordion" label="Accordion Settings">
+				<field name="accordionOpen" type="list" default="1" label="Open first accordion item?" description="Setting this option to open first panel only will open only the first accordion panel when the page loads.">
+					<option value="0">Hide all panels</option>
+					<option value="1">Open first panel only</option>
+				</field>
+			</fieldset>
+			<fieldset name="masonry" group="masonry" label="Masonry Settings">
+				<field name="masonryWidths" type="list" default="1" label="Masonry Widths" description="This option determines the width of the items in the masonry grid. If this option is set to equalise the width of the items, then the items will be displayed with even widths across the width of the parent container eg. if the width is set to three columns then the items in the module will always display in 3 columns regardless of the width of the page. Otherwise if this option is set to retrieve widths specified in the article's meta keywords then each item can have an individual width that is controlled by the first word in the metakeyword for that article. For example if the word four is the first word of the meta keyword for an item then the item will span a four out of twelve columns or a third of the width of the page. If the first word is six then the item will span half or six out of twelve columns across the page.">
+					<option value="0">Equalise widths of all elements</option>
+					<option value="1">Use widths specified in meta keywords</option>
+				</field>
+				<field name="masonryColWidths" type="list" class="btn-group" default="1" label="Widths (Columns)" description="The method you would like to use when resizing images.">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="6">6</option>
+					<option value="12">12</option>
+				</field>
+				<field name="browserThreshold" type="text" default="600" label="Browser Threshold" description="Set the browser width that should trigger the change to single column mode. This option will only work if you are using a responsive width layout or a % based layout." />
+				<field name="masonryColumnWidth" type="text" default="100" label="Base Masonry Column Width" description="Width in pixels of 1 column of your grid." />
+				<field name="masonryGutter" type="text" default="20" label="Masonry Gutter" description="Adds additional spacing between columns." />
+			</fieldset>
+			<fieldset name="carousel" group="carousel" label="Carousel Settings">
+				<field name="minItems" type="text" default="2" label="Minimum Items" description="Set the minumum number of items to display in the carousel. As you reduce the width of the browser and the carousel container this number of items will remain visible in the carousel." />
+				<field name="carouselSpeed" type="text" default="600" label="Carousel Speed" description="The speed for the carousel to move to the next group of items." />
+				<field name="imageW" type="text" default="180" label="Carousel item width" description="The width of each item in the carousel." />
+				<field name="overlayCarousel" type="list" class="btn-group" default="0" label="Add an overlay effect?" description="When enabled this option implements an overlay effect where the first item sits beneath the other items displayed in the module. This effect is best used when the image is the first item in the list below and when the layout selected is either grid or carousel.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="animateOverlayCarousel" type="list" class="btn-group" default="1" label="Animate overlay effect?" description="When enabled any items that are contained within the overlay will appear when the user hovers over the image.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+			<fieldset name="slideshow" group="slideshow" label="Slideshow Settings">
+				<field name="slideshowTheme" type="list" default="overlay" label="Slideshow Theme" description="This setting applies specific css to your slideshow to recreate specific layouts. The overlay theme is focussed on using the image as a background and overlaying the text and other elements on top of the image. The flat layout displays the items in a flat list like layout in the module..">
+					<option value="overlay">Overlay</option>
+					<option value="overlayFrame">Overlay Frame</option>
+					<option value="flat">Flat</option>
+					<option value="standard">Standard</option>
+				</field>
+				<field name="overlayAnimation" type="list" class="btn-group" default="1" label="Animate details in Overlay theme?" description="When enabled the slideshow items that sit on top of the slideshow image when using the Overlay theme slide up and slide down as the main image transitions from one image to the next.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="slideshowAuto" type="list" class="btn-group" default="1" label="Enable slideshow autoplay" description="When enabled the slideshow will automatically cycle through the slides available in the slideshow."		>
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="slideshowLoop" type="list" class="btn-group" default="1" label="Continuous Loop" description="If this settign is enabled the slideshow will cycle continuously through the available slides. If the setting is disabled then the slideshow will stop at the last slide.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field type="heading" title="Transition Settings" />
+				<field name="transition" type="list" class="btn-group" default="fade" label="Slideshow transition" description="Determines the transition behaviour when the slideshow moves from one slide to the next.">
+					<option value="fade">Fade</option>
+					<option value="slide">Slide</option>
+				</field>
+
+				<field name="slideshowSpeed" type="text" default="6000" label="Slide Duration" description="The speed for the slideshow transition" />
+				<field name="slideshowDuration" type="text" default="600" label="Transition Speed" description="The tiem that each slide stays on the screen" />
+				<field type="heading" title="Pagination"/>
+				<field name="slideshowPaginationType" type="list" class="btn-group" default="thumb" label="Pagination type" description="Select the type of pagination used for the slideshow.">
+					<option value="none">None</option>
+					<option value="thumb">Thumbs</option>
+					<!--	<option value="title">Titles</option> -->
+					<option value="numbers">Numbers</option>
+					<option value="discs">Discs</option>
+				</field>
+				<field name="slideshowPaginationPos" type="list" class="btn-group" default="zenleft" label="Slideshow pagination position." description="The setting below determines the position of the pagination elements in the slideshow.">
+					<option value="zenleft">Left</option>
+					<option value="zencenter">Center</option>
+					<option value="zenright">Right</option>
+				</field>
+				<field name="slideshowTitleTheme" type="list" class="btn-group" default="zendark" label="Slideshow title theme" description="The theme you would liek to apply to the slideshow when using titles as pagination.">
+					<option value="zenlight">Light</option>
+					<option value="zendark">Dark</option>
+					<option value="zennone">None</option>
+				</field>
+				<field name="slideTitleWidth" type="text" default="26%" label="Width of title pagination" description="This setting defines the width of the triggers for each slide when the title method of pagination is used. Please refer to the Zen Tools documentation for a more through understanding of how to implement this feature." />
+				<field name="slideTitleHide" type="text" default="800px" label="Hide title breakpoint" description="This setting determines when the titles in the slideshow should be hidden. When the browser is below the px width specified here the pagination will revert to the disc style." />
+				<field name="itemsperpage" type="text" default="3" label="Items per pagination page" description="This setting allows the user to specify the number of pagination items to show." />
+				<field name="thumb_width" type="text" default="20" label="Thumb Width" description="The width of the thumbnail image - without px" />
+				<field name="thumb_height" type="text" default="20" label="Thumb Height" description="The height of the thumbnail image - without px" />
+				<field type="heading" title="Slideshow Count" />
+				<field name="slideCount" type="list" class="btn-group" default="0" label="Slideshow count" description="When enabled a count of the number of items  in the slideshow are displayed on the page.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="slideCountSep" type="text" default="of" label="Slide count separator" description="This option allows you to place a string in between the current slide and the total number of slides on the page if the setting above is enabled." />
+				<field type="heading" title="Next / Previous"/>
+				<field name="slideshowNav" type="list" class="btn-group" default="1" label="Enable navigation" description="When enabled next and previous arrows will be rendered inside the module.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="slideshowPause" type="list" class="btn-group" default="1" label="Display pause / play button" description="When enabled a button will appear that is able to pause or play the slideshow.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="playText" type="text" default="Play" label="Play Text" description="The text used to display the play command" />
+				<field name="pauseText" type="text" default="Pause" label="Pause Text" description="The text used to display the pause command" />
+			</fieldset>
+			<fieldset name="fancybox" group="fancybox" label="Lightbox Settings">
+				<field type="heading" title="Content within the lightbox" />
+				<field type="description" default="The settings below are only relevant if the content source selected above is either Joomla or K2. If you have selected directory as a source then the image will be shown in the lightbox and the width and other options will not apply." />
+				<field name="modalTitle" type="list" class="btn-group" default="1" label="Display Title" description="When enabled, the title of the item will appear in the lightbox.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="modalImage" type="list" class="btn-group" default="0" label="Display Image" description="When enabled, the first image found int he introtext of the item will appear in the lightbox. Disable this option if you are also displaying the introtext."	>
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="modalText" type="list" class="btn-group" default="1" label="Display Intro Text" description="When enabled, the introtext of the item will appear in the lightbox."		>
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="modalVideo" type="list" class="btn-group" default="1" label="K2 Video" description="When enabled, and if the K2 Media field is populated a video will display in the modal window."			>
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="modalMore" type="list" class="btn-group" default="0" label="Display read more" description="When enabled this option will diosplay a link to the full text of the item in question. This option only works when using the content item link as the destination for the item links.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="modalThumbTip" type="list" class="btn-group" default="1" label="Display thumbnails tips" description="When enabled this option will display a tip with the title for thumbnails.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="modalFooterTitle" type="list" class="btn-group" default="1" label="Display Title on Footer" description="When enabled, the title of the item will appear in the lightbox footer.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field type="heading" title="Dimensions" />
+				<field name="modalWidth" type="text" default="600" label="Modal window width" description="This option sets the width of the modal window if the slideshow type is set to either content or K2" />
+			</fieldset>
+			<fieldset name="twitter" group="twitter" label="Tweet Settings">
+				<field name="twitterName" type="text" default="joomlabamboo" label="Twitter Username (via)" description="The Twitter username to show: via @username at the end of tweet." />
+				<field name="tweetText" type="text" default="" label="Default Text" description="The tweet default text." />
+				<field name="tweetCount" type="list" default="yes" label="Show Counter?" description="Shows the tweets count.">
+					<option value="none">No</option>
+					<option value="yes">Yes</option>
+				</field>
+				<field name="tweetHashtag" type="text" default="" label="Hashtag #" description="The hashtag you want to insert." />
+				<field name="tweetLargeButton" type="list" default="small" label="Large Button" description="Choose to use the large button.">
+					<option value="small">No</option>
+					<option value="large">Yes</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced" group="advanced" label="Advanced Settings">
+				<field name="scripts" type="list" class="btn-group" default="1" label="CSS and Javascript" description="This option can be used to remove all javascript and css from being loaded by the zentools module. If in doubt leave this option enabled. If you are using the Zen Grid framework version2 then the scripts and css files will be loaded via the framework. If your site uses caching then the relevant files will be loaded into the body of your site.">
+					<option value="0">Disable</option>
+					<option value="1">Enable</option>
+				</field>
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="fieldMODULECLASSSUFFIX" />
+				<field name="cache" type="list" class="btn-group" default="1" label="Caching" description="Select whether to cache the content of this module">
+					<option value="1">Use global</option>
+					<option value="0">No caching</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+				<field name="documentation" type="docs" default="900" label="" description="" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

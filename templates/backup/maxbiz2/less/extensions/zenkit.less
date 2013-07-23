@@ -1,0 +1,60 @@
+/* Zenkit
+-----------------------------------------------------------------------------*/
+#zenkit {
+	
+	#zenfilters,
+	#zenkit-tabs {
+		
+		height:38px;
+		border-color: @minorborderColor !important;
+	
+		li {
+		
+			a {
+			
+				&:hover {
+					border-width:1px 1px 0 1px;
+					background:#fff
+				}	
+				
+				&.active {
+					border:1px solid @minorborderColor;
+					border-width:1px 1px 1px 1px;
+					border-bottom-color:@mainContainerBG;
+					background:@mainContainerBG
+				}
+			}
+		}
+	}
+	
+	ul {
+		
+		li {
+			
+		}
+	}
+	
+	&.slideshow,
+	&.slideshow-overlay {
+	
+		.flex-direction-nav {
+		
+			li {
+			
+				float:left;
+			
+				a {}
+			}
+		}
+	
+	}
+	
+	.buttons,
+	.flex-direction-nav  {
+		li {border-bottom:0}
+	}
+	
+	&.tiles {
+		li {border: 0;}
+	}
+}

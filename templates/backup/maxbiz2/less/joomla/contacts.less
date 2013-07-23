@@ -1,0 +1,88 @@
+/* Contact Form
+-----------------------------------------------------------------------------*/
+.contact dt {
+	margin: 20px 0 0 ;
+}
+
+.contact-category td {
+	padding: 20px;
+}
+
+.readmore a.btn span:after {padding-left: 10px}
+
+.article-info{color: @grayLight}
+
+.article-info-term {display:none;}
+
+.page-header {border:0}
+.page-header.item-title {border-bottom:1px solid @borderColor}
+
+
+
+/* Contact Form - Sliders
+-----------------------------------------------------------------------------*/
+.slidecontent {height:0;overflow:hidden}
+.accordion-group {border:0;margin:0;padding: 0 !important;
+}
+.accordion-heading {
+	border-bottom:1px solid @borderColor !important;
+	clear:both;
+	
+	.border-radius(0);
+	font-size:1.4em;
+	line-height: 2em;
+
+	
+	a {text-decoration:none;}
+	
+	.collapsed .accordion-icon:before {
+		content:"\f067";
+		font-family: FontAwesome;
+		margin-right:10px;
+		color:@primary;
+		font-size:80%;
+	}
+	
+	.accordion-icon:before {
+		content:"\f068";
+		font-family: FontAwesome;
+		margin-right:10px;
+		color:@primary;
+		font-size:80%
+	}
+	
+	 &:hover span:before {
+		color:@secondary !important
+	}
+}
+
+.contact {
+	.collapsed .accordion-icon:before {
+
+	}
+	
+	.accordion-icon:before {
+	
+	}
+}
+
+
+
+/* Contact Form - Tabs
+-----------------------------------------------------------------------------*/
+.contact {
+	.nav.nav-tabs {
+		padding-bottom:0 !important;
+		margin-top:40px !important;
+		
+		li {padding:0 !important}
+	}
+	
+	.tab-content {
+		padding:30px;
+		margin-top:-1px
+		
+	}
+	
+	h3 {clear:both}
+}

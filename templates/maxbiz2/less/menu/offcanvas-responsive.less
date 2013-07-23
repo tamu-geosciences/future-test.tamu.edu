@@ -1,0 +1,185 @@
+@media (max-width: @navbarCollapseWidth){ 
+
+	
+	.off-canvas-enabled body {
+		/* Bg Colour for canvas menu*/
+		background: @offcanvasbg;
+		
+			}
+	
+	.off-canvas {
+	
+		#paneltrigger a {
+			color:@offcanvasbuttoncolor;
+			
+			&:hover {
+				color:@linkColorHover
+			}
+		}
+		
+		#navwrap {
+		
+			button {
+				color:@offcanvasbuttoncolor;
+				
+				&:hover {
+					color:@linkColorHover
+				}
+			}
+		
+		}
+		
+	
+	}
+	
+	
+	
+	
+	#off-canvas-nav {
+	
+		.t3-mainnav {
+
+			/* Remove bg on icons in menu*/
+			[class^="icon-"] {
+				background:none
+			}
+			
+			/* Reset padding on modules*/
+			.mega-inner {padding:0 !important}
+			
+			
+			.moduletable {
+				
+				/* space around modules in mega menu*/
+				padding:10px;
+				
+				/* Reset any colours*/
+				color: @togglemenutext;
+				
+				/* Reset heading colours*/
+				h1, h2, h3, h4, h5, h6, blockquote {
+					color: @togglemenutext
+				}
+			} 
+			
+			.nav-collapse {
+				float:left;
+				width:100%;
+						
+					
+				li {
+					
+				
+				&.active a{.border-radius(0)}
+				
+					a{
+						.border-radius(0) !important;
+						margin:0;
+						padding:12px;
+						text-align:left !important;
+					}
+					
+				
+				}
+			}
+			
+			
+	
+			
+
+			ul {
+			
+				> li {
+				
+					.separator {
+						float: left;
+						width: 100%;
+						text-align: left;
+						color: @offcanvaslinkcolor;
+				}
+							
+					a,
+					.separator {
+						/* Border below top level items*/
+						border-bottom:1px solid darken( @offcanvasbg, 2%);
+						
+						/* Reset border radius on top level items*/
+						.border-radius(0);
+						
+						/* Padding on top level items*/
+						padding:11px 20px;
+						
+						/* BG color on top level items*/
+						background: @offcanvaslinkbg;
+						
+						/* Top level link colours */
+						color:@offcanvaslinkcolor;
+						
+							
+							&:hover {
+								/* Hover colour*/
+								color:@linkColorHover
+							}
+							
+							&:after {
+								display:none
+							}
+							
+							&.active > a {
+								/* Active items*/
+								background:@offcanvaslinkbg;
+								color:@linkColorHover
+							}
+						
+					}
+					
+					
+						
+					 ul {
+					 	/* Second level items */
+					 	margin:0;
+					 
+					 	li {
+					 		padding: 0 !important;
+					 
+					 
+							a {
+								/* BG Second level items */
+								background:@offcanvassublinkbg;
+								
+								color:  @offcanvassublinkcolor;
+								
+								/* IndentSecond level items */
+								padding:6px 0 6px 20px !important;
+								
+								/* Remove border on Second level items */
+								border-bottom:0;
+								
+								/* Remove hover on Second level items */
+								&:hover {
+									background:none
+								}
+							}
+							
+							 &.active > a {
+							 	/* Active Second level items */
+							 	color: @primary !important;
+							 }
+						
+					
+						 	li {
+						 		
+								a {
+									/* Third Second level items */
+									border:0;
+									padding:6px 0 6px 50px !important
+								}
+
+							}
+						}
+					}
+				}	
+			}
+		}
+	}
+}

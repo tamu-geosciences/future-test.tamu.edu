@@ -1,0 +1,133 @@
+/**
+ * @package		Zen Tools
+ * @subpackage	Zen Tools
+ * @author		Joomla Bamboo - design@joomlabamboo.com
+ * @copyright 	Copyright (c) 2013 Joomla Bamboo. All rights reserved.
+ * @license		GNU General Public License version 2 or later
+ * @version		1.10.5
+ */
+
+
+
+
+/* Theme specific
+-----------------------------------------------------------------------------*/
+
+
+.slideshowstandard .zentitle a {
+	color: #fff;
+}
+
+.slideshowstandard .slide-controller {
+	position: absolute;bottom:0px;height:30px;overflow: visible;
+}
+
+.slideshowstandard .flex-pauseplay a.flex-pause span,.slideshowstandard ul.flex-direction-nav li a{
+border: 0;
+-webkit-box-shadow:none;
+-moz-box-shadow: none;
+box-shadow:    none;
+}
+
+.slideshowstandard ul.flex-direction-nav li a {
+	padding: 4px 8px 8px 0 !important;margin-top: -60px;color: #fff;font-size: 16px}
+
+.slideshowstandard ul.flex-direction-nav li a,
+.slideshowstandard .slidecount,
+.slideshowstandard .allitems{	
+background:rgba(0,0,0,.4);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000,endColorstr=#50000000);
+position: absolute;padding: 4px 0 2px;border: 0;
+}
+
+.slideshowstandard ul.flex-direction-nav a:hover{	
+background:rgba(0,0,0,.8);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000,endColorstr=#50000000);
+position: absolute;padding: 4px 0 2px;
+}
+
+.slideshowstandard .allitems.container {
+	position: absolute;right: 0;line-height: 1;top: 87%;width: auto !important;padding:4px 10px;
+}
+
+.slideshowstandard .allitems .zentitle,
+.slideshowstandard .allitems .zentext {
+float: left;margin-right:10px;color: #fff;
+}
+
+.slideshowstandard .allitems div {
+	float: left;
+}
+
+.slideshowstandard .allitems .zenmore {
+	float: right;margin-top: 40px;
+}
+
+.slideshowstandard .zentitle h1,
+.slideshowstandard .zentitle h2,
+.slideshowstandard .zentitle h3,
+.slideshowstandard .zentitle h4,
+.slideshowstandard .zentitle p {
+	margin-bottom: 0;margin-top: 4px;
+}
+
+.slideshowstandard ul.flex-direction-nav {
+	margin-top:  0px !important
+}
+.slideshowstandard ul.flex-direction-nav a.prev {
+	left: 3%;
+}
+.slideshowstandard ul.flex-direction-nav a.next {
+	right: 3%;
+}
+
+/* Remobves default span image */
+.slideshowstandard ul.flex-direction-nav a span {
+background: none;
+}
+
+/* Slideshow count */
+.slideshowstandard .slidecount {
+	bottom: 90px;right: 3%;padding: 10px 6px;line-height: 0.1;font-size: 30%;color: #eee;margin: 0
+}
+
+.slideshowstandard ul.slidenav {
+	/*bottom: 10px;*/position: absolute;height: 10px;width: 100%; margin-left: 0%}
+
+@-moz-document url-prefix() {
+	.slideshowstandard ul.slidenav {
+	/*bottom: 10px;*/position: absolute;height: 10px;width: 100%; margin-left: -5%}
+}
+
+.slideshowstandard {
+	padding-bottom: 0px;
+}
+
+.slideshowstandard ul.slidenav li img {
+	padding: 2px 2px 2px 0;
+}
+
+.slideshowstandard .flex-pauseplay {
+	bottom: -10px;position: absolute;font-size: 1.5em;padding: 4px ;right: 0;}
+	
+	.slideshowstandard .flex-pauseplay a {
+	color: #333;
+}
+	
+	.slideshowstandard .flex-pauseplay a span{
+	cursor: pointer;background: 0 !important;border: 0 !important;text-indent: -9999em !important;display: none
+}
+
+.slideshowstandard .slidenavnumbers li {
+	font-size: 40%;margin-right: 4px;
+}
+
+.slideshowstandard .slidenavnumbers li.flex-active span,
+.slideshowstandard .slidenavnumbers li:hover span{
+	background: #666;color: #fff;
+}
+
+.slideshowstandard .allitems.container a{
+	color: #fff !important;
+}
+

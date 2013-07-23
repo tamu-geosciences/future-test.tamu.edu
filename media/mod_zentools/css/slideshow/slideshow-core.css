@@ -1,0 +1,418 @@
+/**
+ * @package		Zen Tools
+ * @subpackage	Zen Tools
+ * @author		Joomla Bamboo - design@joomlabamboo.com
+ * @copyright 	Copyright (c) 2013 Joomla Bamboo. All rights reserved.
+ * @license		GNU General Public License version 2 or later
+ * @version		1.10.5
+ */
+
+/* Slideshow
+-----------------------------------------------------------------------------*/
+.zentools.slideshow li {
+margin:0
+}
+
+.zentools.slideshow ul.slidenav li {margin: 0 10px 0 0}
+
+.zenrelative {
+position: relative;z-index: 1;
+}
+
+.slideshow {
+clear:both;
+float:left;
+width:100%
+}
+
+
+/* Reset for Zencenter rule applied via framework
+-----------------------------------------------------------------------------*/
+.zentools .zencenter,
+.zentools .zenright {
+	text-align: left
+}
+
+
+
+/* Slideshow Nav
+-----------------------------------------------------------------------------*/
+.slide-controller ul.slidenav.zencenter {
+text-align: center;margin-top: 5px;
+}
+
+
+
+.slide-controller ul.slidenav.zencenter li,.slide-controller.zencenter ul.slidenav li.flex-active{
+	display:inline;float: none;
+	padding:0 7px 0 7px
+}
+
+.slide-controller ul.slidenav.zencenter li span {
+display: inline-block;padding: 0;
+}
+
+
+.slide-controller ul.slidenav.zenright {
+float: right
+}
+
+
+
+.slide-controller ul.slidenav.zenright li {
+display: inline !important
+}
+
+
+.slidenavdiscs {
+text-align: center;float: left;width: 100%;padding: 8px 0;
+}
+
+
+.slide-controller {
+margin-top: 0px;overflow: hidden;width: 100%;
+}
+
+.slide-controller.zenpadding {
+padding: 10px 0 0
+}
+
+.zentools.slideshow ul.flex-direction-nav {
+width: 50px;margin-top:0px;
+}
+
+.slide-controller {
+margin: 0;padding-bottom: 10px;
+}
+
+
+ul.slidenav li img {
+	margin-bottom: 10px;
+}
+
+.slide-controller.none {
+	display: none
+}
+
+
+
+
+
+/* Slideshow Nav - Numbers
+-----------------------------------------------------------------------------*/
+.slidenavnumbers ul.zenleft li {
+float: left;
+padding: 0 !important;
+}
+
+.slidenavnumbers ul.zenright li {
+padding: 0 !important;
+}
+.slidenavnumbers ul.zenleft li span,
+.slidenavdiscs ul.zenleft li span,
+.slidenavnumbers ul.zencenter li span,
+.slidenavnumbers ul.zenright li span {
+float: left;
+background:#eee;
+border-radius:4px;
+cursor:pointer;
+margin-bottom:12px;
+padding:4px 8px
+}
+
+.slidenavnumbers ul li.flex-active span,
+.slidenavnumbers ul.zencenter li.flex-active span {
+background:#999;
+color:#fff
+}
+
+.slidenavnumbers ul.zencenter li span,
+.slidenavnumbers ul.zenright li span {
+cursor: pointer;padding: 4px 6px !important;border-radius:4px;
+float: none;margin-right: 0;
+}
+
+.slidenavnumbers ul.zencenter li {
+padding: 0 !important;
+}
+
+.slidenavthumb ul.zenright {
+float: right !important
+}
+
+/* Slideshow Nav - Discs
+-----------------------------------------------------------------------------*/
+.slidenavdiscs ul li {
+background:url(../../images/slideshow/nav.png) 0 0 no-repeat;
+display:block;
+text-indent:-9999em;
+float: left;
+padding: 8px !important;
+margin:0
+}
+
+.slidenavdiscs ul li.flex-active {
+background:url(../../images/slideshow/nav.png) 0 -79px no-repeat;
+display:block;float: left;
+text-indent:-9999em;
+margin:0
+}
+
+.slidenavdiscs ul li span {
+display: none;
+}
+
+
+
+/* Slideshow Nav - Thumb
+-----------------------------------------------------------------------------*/
+
+.slidenavthumb ul li {
+margin-bottom:12px;
+margin-right:10px;
+cursor:pointer
+}
+
+.slidenavthumb ul.zenleft li
+{
+float: left;padding: 0;
+}
+
+.slidenavthumb ul.zencenter li
+{
+margin: 0;padding: 0 !important;
+}
+
+
+/* Slideshow Count
+-----------------------------------------------------------------------------*/
+.slidecount{float: right;text-align: right;;;margin-top: 0px;height: 20px;font-size: 90%;display: none;}
+
+
+
+
+/* Flexislider CSS
+-----------------------------------------------------------------------------*/
+
+/* Browser Resets */
+.flex-container a:active,.flexslider a:active {
+outline:none
+}
+
+.slides,.flex-control-nav,.flex-direction-nav {
+list-style:none;
+margin:0;
+padding:0
+}
+
+/* FlexSlider Necessary Styles
+*********************************/
+.flexslider {
+width:100%;
+margin:0;
+padding:0
+}
+
+.flexslider .slides > li {
+display:none;
+position:relative
+}
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {
+max-width:100%;
+display:block;
+margin:0;
+}
+
+
+.flex-pauseplay {
+float:left;margin-top: 5px;
+}
+
+.flex-pauseplay span {
+padding: 5px 10px;
+z-index:11;
+text-align: center;
+border-radius:3px;
+border: 1px solid #DDD;
+text-transform:uppercase;
+cursor:pointer;
+font-size:85%;
+text-align:right;
+clear:both
+}
+
+.flex-pauseplay a.flex-play span{
+text-shadow: 0 1px 1px white;
+background: -webkit-linear-gradient(top, white, #E0E0E0);
+background:    -moz-linear-gradient(top, white, #E0E0E0);
+background:     -ms-linear-gradient(top, white, #E0E0E0);
+background:      -o-linear-gradient(top, white, #E0E0E0);
+font-weight: bold;
+font-size:80%;
+}
+
+.flexslider .flex-pauseplay a.flex-pause span,ul.flex-direction-nav li a{
+border: 1px solid #ccc;
+-webkit-box-shadow: inset 0 1px 2px #eee;
+-moz-box-shadow:    inset 0 1px 2px #eee;
+box-shadow:         inset 0 1px 2px #fff;
+background: -webkit-linear-gradient(top, #fff, gainsboro);
+background:    -moz-linear-gradient(top, #fff, gainsboro);
+background:     -ms-linear-gradient(top, #fff, gainsboro);
+background:      -o-linear-gradient(top, #fff, gainsboro);
+font-size:80%;
+}
+
+
+/* Clearfix for the .slides element */
+.slides:after {
+content:".";
+display:block;
+clear:both;
+visibility:hidden;
+line-height:0;
+height:0
+}
+
+html[xmlns] .slides {
+display:block
+}
+
+* html .slides {
+height:1%
+}
+
+/* No JavaScript Fallback
+ If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {
+display:block
+}
+
+/* FlexSlider Default Theme
+*********************************/
+
+/* Suggested container for "Slide" animation setups. Can replace this with your own, if you wish */
+.flex-container {
+zoom:1px;
+position:relative
+}
+
+/* Caption style
+ IE rgba() hack */
+.flex-caption {
+background:none;
+-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
+zoom:1px
+}
+
+/* Direction Nav */
+.slide-controller .flex-direction-nav {
+float: left;margin-top: 20px;
+}
+
+
+.flex-direction-nav li a span {
+width:15px;
+height:20px;
+display:block;
+background:url(../../images/slideshow/bg_direction_nav.png) no-repeat 0 -18px;
+cursor:pointer;
+text-indent:-9999px;
+z-index:10;
+float:left;
+
+}
+
+ul.flex-direction-nav li a {
+float: left;padding: 4px 4px 4px 1px;width: 14px;border-radius:3px;height: 13px;margin-right: 4px;
+}
+
+
+.flex-direction-nav li a:active,.flex-direction-nav li a:focus {
+top:auto
+}
+
+.flex-direction-nav li .next span{
+background-position:-92px -18px !important;
+margin-left:4px
+}
+
+.flex-direction-nav li .disabled {
+opacity:.3;
+filter:alpha(opacity=30);
+cursor:default
+}
+
+/* Control Nav */
+.flex-control-nav {
+text-align:center;
+z-index:11;
+position:relative;
+clear:both
+}
+
+.flex-control-nav li {
+zoom:1px;
+display:inline;
+margin:0 0 0 5px
+}
+
+.flex-control-nav li:first-child {
+margin:0
+}
+
+.flex-control-nav li a {
+width:13px;
+height:13px;
+display:block;
+background:url(../images/slideshow/bg_control_nav.png) no-repeat 0 0;
+cursor:pointer;
+text-indent:-9999px
+}
+
+.flex-control-nav li a:hover {
+background-position:0 -13px
+}
+
+.flex-control-nav li a.active {
+background-position:0 -26px;
+cursor:default
+}
+
+
+.slideshow.zenpagination {
+position: relative;
+}
+.slideshow.zenpagination .slide-controller {
+position: absolute;right: 0;top: -12px;
+}
+
+.slideshow.zenpagination .slide-controller li {
+list-style-type: none;
+}
+
+
+/* Slideshow Pagination - none
+-----------------------------------------------------------------------------*/
+.slidenavnone ul.slidenav {
+display: none;
+}
+
+.slide-controller i {
+	display: none;
+}
+
+.flex-viewport {
+	float: left;
+	width: 100%;
+}
+
+
+.slideshow li {
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}

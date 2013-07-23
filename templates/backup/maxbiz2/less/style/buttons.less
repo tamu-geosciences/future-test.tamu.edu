@@ -1,0 +1,35 @@
+.readmore a.btn,.zenmore a {
+	padding: 6px 8px;
+	.border-radius(4px);
+	background: @btnColor;
+	border: 0;
+	border-bottom: 2px solid darken(@btnColor,20%);
+	
+	&:hover {
+		background: darken(@btnColor, 10%) !important
+	}
+	
+	span:after {padding-left: 0px;content: "";
+	}
+
+}
+
+.readmore a.btn:hover {
+	.buttonBackground(@btnColor, @btnColor);
+}
+
+
+.readmore a.btn,.zenmore a {
+	.buttonBackground(@btnColor, lighten(@btnColor, 10%));
+	border-color: #c5c5c5;
+	border-color: rgba(0,0,0,.15) rgba(0,0,0,.15) rgba(0,0,0,.25);
+	color: #fff;
+}
+
+.readmore a.btn:hover {
+	.buttonBackground(@btnColor, @btnColor);
+}
+
+section.readmore {
+	margin-bottom: 30px;
+}

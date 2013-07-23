@@ -1,0 +1,59 @@
+/**
+ * @package     Zen Tools
+ * @subpackage  Zen Tools
+ * @author      Joomla Bamboo - design@joomlabamboo.com
+ * @copyright   Copyright (c) 2013 Joomla Bamboo. All rights reserved.
+ * @license     GNU General Public License version 2 or later
+ * @version     1.10.5
+ */
+
+.zenpages {
+float: left;width: 100%;margin: 0 0 30px 0
+}
+
+.zenpages a {
+    font-size:12px;
+    cursor:pointer;
+    margin:0 5px;
+    color:#333;
+    background: #ccc;padding: 4px 8px;
+    border-radius: 4px;
+    float: left;
+}
+.zenpages a:hover {
+    background-color:#222;
+    color:#fff;
+    text-decoration: none;
+}
+.zenpages a.jp-previous {
+    margin-right:15px;
+}
+.zenpages a.jp-next {
+    margin-left:15px;
+}
+.zenpages a.jp-current,.zenpages a.jp-current:hover {
+    background: #666;
+    color: #fff;
+}
+.zenpages a.jp-disabled,.zenpages a.jp-disabled:hover {
+    color:#bbb
+}
+
+a.jp-current:hover,
+.zenpages a.jp-disabled,
+a.jp-disabled:hover {
+    cursor:default;
+    background:none;
+}
+
+.zenpages span {
+    margin: 0 5px
+}
+
+.zenpagination ul li{
+margin-bottom: 0 !important;
+}
+
+.zenpagination {
+margin-bottom: 30px;float: left;width: 100%;
+}

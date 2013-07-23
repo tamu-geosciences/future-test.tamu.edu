@@ -1,0 +1,88 @@
+/**
+ * @package   Zen Tools
+ * @subpackage  Zen Tools
+ * @author    Joomla Bamboo - design@joomlabamboo.com
+ * @copyright   Copyright (c) 2013 Copyright (C), Joomlabamboo. All Rights Reserved.. All rights reserved.
+ * @license   license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+ * @version   1.10.2
+ */
+
+/* Masonry
+-----------------------------------------------------------------------------*/
+.zentools.masonry li.grid_1,.zentools.masonry li.grid_twelve,.zentools.masonry li.full {
+width:94%
+}
+
+.zentools.masonry .zenitem,.zentools .grid .zenitem,.zentools.grid .zenitem {
+margin-bottom:30px
+}
+
+
+
+.zentools.masonry li.grid_2,.zentools.masonry li.grid_six {
+width:40.5%
+}
+
+.zentools.masonry li.grid_3,.isotope li.grid_3,.zentools.masonry li.grid_four,.isotope li.grid_four {
+width:29%;margin-right: 2%;
+}
+
+.zentools.masonry li.grid_4,.zentools.masonry li.grid_three {
+width:20.75%
+}
+
+.zentools.masonry li.grid_6,.zentools.masonry li.grid_two {
+width:11%
+}
+
+.zentools.masonry li.grid_12,.zentools.masonry li.grid_one {
+width:4.5%
+}
+
+.zentools.masonry img {
+margin-bottom:20px
+}
+
+
+
+
+/* Filter View
+-----------------------------------------------------------------------------*/
+.grid_one.isotope-item,.grid_two.isotope-item,.grid_three.isotope-item,.grid_four.isotope-item,.grid_five.isotope-item,.grid_six.isotope-item,.grid_seven.isotope-item,.grid_eight.isotope-item,.grid_nine.isotope-item,.grid_ten.isotope-item,.grid_eleven.isotope-item
+{
+margin-right: 0;
+*margin-right: 0; /* Targeting IE7 only*/
+float: left;
+position: relative;
+min-height: 1px
+}
+
+
+
+
+/* Transitions for Filter view
+-----------------------------------------------------------------------------*/
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+       -o-transition-property:         top, left, opacity;
+          transition-property:         transform, opacity;
+}
+
+.isotope-hidden {display: none !important;}

@@ -1,0 +1,83 @@
+/**
+ * @package		Zen Tools
+ * @subpackage	Zen Tools
+ * @author		Joomla Bamboo - design@joomlabamboo.com
+ * @copyright 	Copyright (c) 2012 Joomla Bamboo. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @version		1.7.1
+ */
+
+/* Base Elastislide Styles */
+.es-carousel-wrapper{
+overflow: hidden;
+	padding:10px 37px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	position:relative;
+}
+.es-carousel{
+	overflow:hidden;
+
+}
+.es-carousel ul{
+	display:none;
+}
+.es-carousel ul li{
+	height:100%;
+	float:left;
+	display:block;
+}
+.es-carousel ul li a{
+	display:block;
+}
+.es-carousel ul li a img{
+	display:block;
+	border:none;
+	max-height:100%;
+	max-width:100%;
+}
+.es-nav span{
+	position:absolute;
+	top:50%;
+	left:12px;
+	width:14px;
+	height:26px;
+	margin-top:-13px;
+	cursor:pointer;
+}
+.es-nav span.es-nav-next{
+	right:12px;
+	left:auto;
+	background-position:top right;
+}
+
+
+
+/*  Additions to default css for Zentools
+-----------------------------------------------------------------------------*/
+.es-nav span{
+	position:absolute;
+left: 1%;
+	font-size: 2em;
+	color: #222;
+}
+
+/* Hide the text for the navigation */
+.es-nav span span {
+	display: block;text-indent: -9999em;
+}
+
+/* Small Navigation offset for the carousel */
+.es-nav span.es-nav-next{
+	right:3%;
+}
+
+/* Arrow hover */
+.es-nav span:hover{
+	color: #999;
+}
+
+.zentools.es-carousel li.element {
+	margin-right: 0 !important;
+}

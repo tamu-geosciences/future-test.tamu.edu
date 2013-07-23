@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension
+	version="2.5"
+	type="template"
+	method="upgrade" client="site">
+	<name>Maxbiz2</name>
+	<version>1.2.1</version>
+	<creationDate>01 May 2013</creationDate>
+	<author>Joomlabamboo</author>
+	<authorEmail>design@joomlabamboo.com</authorEmail>
+	<authorUrl>http://www.joomlabamboo.com</authorUrl>
+	<copyright>Copyright (C), Joomlabamboo. All Rights Reserved.</copyright>
+	<license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<group>t3</group>
+	<description>	
+	<![CDATA[
+		<h2>
+		  Maxbiz
+		  <small style="display: block;">An update to our simple business template released in 2008 for Joomla 3+</small>
+		</h2>
+		<p>A simple Joomla theme that scales effortlessly on any device.</p>
+		]]>
+	</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>templateInfo.php</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<folder>admin</folder>
+		<folder>css</folder>
+		<folder>etc</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>js</folder>
+		<folder>less</folder>
+		<folder>images</folder>
+		<folder>tpls</folder>
+	</files>
+	
+	<languages folder="languages">
+		<language tag="en-GB">en-GB.tpl_maxbiz2.ini</language>
+		<language tag="en-GB">en-GB.tpl_maxbiz2.sys.ini</language>
+	</languages>
+
+	<positions>
+		<position>banner</position>
+		<position>search</position>
+		<position>top1</position>
+		<position>top2</position>
+		<position>top3</position>
+		<position>top4</position>
+		<position>header1</position>
+		<position>header2</position>
+		<position>header3</position>
+		<position>header4</position>
+		<position>menu</position>
+		<position>breadcrumb</position>
+		<position>grid1</position>
+		<position>grid2</position>
+		<position>grid3</position>
+		<position>grid4</position>
+		<position>grid5</position>
+		<position>grid6</position>
+		<position>grid7</position>
+		<position>grid8</position>
+		<position>grid9</position>
+		<position>grid10</position>
+		<position>grid11</position>
+		<position>grid12</position>
+		<position>above</position>
+		<position>abovecontent</position>
+		<position>sidebar-1</position>
+		<position>sidebar-2</position>
+		<position>below</position>
+		<position>belowcontent</position>
+		<position>grid13</position>
+		<position>grid14</position>
+		<position>grid15</position>
+		<position>grid16</position>
+		<position>grid17</position>
+		<position>grid18</position>
+		<position>grid19</position>
+		<position>grid20</position>
+		<position>grid21</position>
+		<position>grid22</position>
+		<position>grid23</position>
+		<position>grid24</position>
+		<position>bottom1</position>
+		<position>bottom2</position>
+		<position>bottom3</position>
+		<position>bottom4</position>
+		<position>bottom5</position>
+		<position>bottom6</position>
+		<position>footer</position>
+		<position>footer2</position>
+		<position>footer3</position>
+		<position>footer4</position>
+		<position>footer5</position>
+		<position>footer6</position>
+		<position>debug</position>
+	</positions>
+<config>
+			<fields name="params" addfieldpath="/plugins/system/jat3v3/includes/depend">
+				<!-- Extra params added to the theme tab -->
+				<fieldset name="theme_params" label="T3V3_THEME_LABEL" description="T3V3_THEME_DESC">
+					<field name="theme_params2_default" type="t3depend" function="@group">
+						<option for="jblogotype" value="text">logoclass</option>
+						<option for="jblogotype" value="text">logoFont</option>
+						<option for="jblogotype" value="text">logosize</option>
+						<option for="jblogotype" value="text">logotext</option>
+						<option for="jblogotype" value="hide">logotype</option>
+						<option for="jblogotype" value="hide">sitename</option>
+						<option for="jblogotype" value="hide">slogan</option>
+						<option for="jblogotype" value="hide">logoimage</option>
+						<option for="jblogotype" value="image">jblogoimage</option>
+						<option for="jblogotype" value="image">tagline</option>
+						<option for="jblogotype" value="text">tagline</option>
+						<option for="jblogotype" value="image">logoalign</option>
+						<option for="jblogotype" value="text">logoalign</option>
+						<option for="jblogotype" value="image">logoclass</option>
+						<option for="jblogotype" value="text">logoclass</option>
+					</field>
+					
+					<field name="jblogotype" type="radio" class="btn-group" default="text" label="Logo Type" description="This setting determines the type of logo you would like to use. Select no logo in order to disable all template logo output and display your logo in a module elsewhere ont he page.">
+							<option value="image">Image</option>
+							<option value="text">Text</option>
+							<option value="none">No logo</option>
+					</field>
+					<field name="jblogoimage" type="t3media" default=""
+						label="T3_THEME_LOGOIMAGE_LABEL" 
+						description="T3_THEME_LOGOIMAGE_DESC" />
+					<field name="logotext" type="text" filter="raw" default="max{jb_span}biz{/jb_span}" label="Logo Text" description="Enter the text for your logo"/>
+					<field name="tagline" type="text" default="" label="Tagline" description="Enter the tagline that sits underneath your logo. The left and top offsets of the tagline are controlled in the Theme Magic settings."/> 
+					<field name="logoalign" type="radio" class="btn-group" default="zenleft" label="Logo Alignment" description="This setting determines the positioning of the logo.">
+							<option value="zenleft">Left</option>
+							<option value="zencenter">Center</option>
+							<option value="zenright">Right</option>
+					</field>
+					<field name="logoclass" type="text" default="h2" label="Logo Class" description="ZEN_LOGO_CLASS_DESC"/>
+					<field name="logoFont" type="list" default="-1" label="Logo Font Family" description="Sets the font used for the logo">
+			      			<option value="Cambria, Georgia, Times, Times New Roman, serif">Cambria, Georgia, Times, Times New Roman, serif</option>
+			      			<option value="Adobe Caslon Pro, Georgia, Garamond, Times, serif">Adobe Caslon Pro, Georgia, Garamond, Times, serif</option>
+			      			<option value="Courier new, Courier, Andale Mono">Courier new, Courier, Andale Mono</option>
+			      			<option value="Garamond, ‘Times New Roman’, Times, serif">Garamond, ‘Times New Roman’, Times, serif</option>
+			      			<option value="Georgia, Times, ‘Times New Roman’, serif">Georgia, Times, ‘Times New Roman’, serif</option>
+			      			<option value="GillSans, Calibri, Trebuchet, arial sans-serif">GillSans, Calibri, Trebuchet, arial sans-serif</option>
+			      			<option value="sans-serif">Helvetica Neue, Helvetica, Arial, sans-serif</option>
+			      			<option value="Lucida Grande, Geneva, Helvetica, sans-serif">Lucida Grande, Geneva, Helvetica, sans-serif</option>
+			      			<option value="Palatino, ‘Times New Roman’, serif">Palatino, ‘Times New Roman’, serif</option>
+			      			<option value="Tahoma, Verdana, Geneva">Tahoma, Verdana, Geneva</option>
+			      			<option value="Trebuchet ms, Tahoma, Arial, sans-serif">Trebuchet ms, Tahoma, Arial, sans-serif</option>
+			      			<option value="League Gothic">League Gothic</option>
+			      			<option value="-1">Google Font</option>
+			      		</field> 
+			      		
+			      		<field name="logoFont_custom" type="text" default="Merriweather Sans"  size="30"
+			      		  label="Google Font - Logo"
+			      		  description="Enter the google font you want to use on your site here. If the font name contains spaces just add the space as per the way it is described in the google font directory eg Source Sans pro" />
+			   
+			   		<field name="logo_params_default" type="t3depend" function="@group">
+			      	 <option for="logoFont" value="-1">logoFont_custom</option>
+			     	</field> 
+			     	<field name="menualign" type="radio" class="btn-group" default="zenleft" label="Menu Alignment" description="This setting determines the alignment of the menu.">
+			     			<option value="zenleft">Left</option>
+			     			<option value="zencenter">Center</option>
+			     			<option value="zenright">Right</option>
+			     	</field> 
+				 </fieldset>
+				
+				<fieldset name="font_params" label="Fonts" description="">
+					<field name="font_params_default" type="t3depend" function="@group">
+				        <option for="bodyFont" value="-1">bodyFont_custom</option>
+				        <option for="logoFont" value="-1">logoFont_custom</option>
+				        <option for="headingFont" value="-1">headingFont_custom</option>
+				        <option for="navFont" value="-1">navFont_custom</option>
+				        <option for="customFont" value="-1">customFont_custom</option>
+				      </field>  
+					<field name="baseFontSize" type="text" default="80%" label="Base font size" description="Sets the base font size that all % and em based font declarations is based upon." />
+			      		<field name="bodyFont" type="list" default="-1" label="Body font family" description="Select google font to load a google font">
+				      		<option value="Cambria, Georgia, Times, Times New Roman, serif">Cambria, Georgia, serif</option>
+				      		<option value="Adobe Caslon Pro, Georgia, Garamond, Times, serif">Adobe Caslon Pro, Georgia, Garamond serif</option>
+				      		<option value="Courier new, Courier, Andale Mono">Courier new, Courier, Andale Mono</option>
+				      		<option value="Garamond, ‘Times New Roman’, Times, serif">Garamond, ‘Times New Roman’, Times, serif</option>
+				      		<option value="Georgia, Times, ‘Times New Roman’, serif">Georgia, Times, ‘Times New Roman’, serif</option>
+				      		<option value="GillSans, Calibri, Trebuchet, arial sans-serif">GillSans, Calibri, Trebuchet, arial sans-serif</option>
+				      		<option value="sans-serif">Helvetica Neue, Helvetica, Arial, sans-serif</option>
+				      		<option value="Lucida Grande, Geneva, Helvetica, sans-serif">Lucida Grande, Geneva, Helvetica, sans-serif</option>
+				      		<option value="Palatino, ‘Times New Roman’, serif">Palatino, ‘Times New Roman’, serif</option>
+				      		<option value="Tahoma, Verdana, Geneva">Tahoma, Verdana, Geneva</option>
+				      		<option value="Trebuchet ms, Tahoma, Arial, sans-serif">Trebuchet ms, Tahoma, Arial, sans-serif</option>
+				      		<option value="League Gothic">League Gothic</option>
+				      		<option value="-1">Google Font</option>
+				      	</field>  
+				      	<field name="bodyFont_custom" type="text" default="Open+Sans:400,600,300:latin"  size="30"
+				      	  label="Google Font - Body"
+				      	  description="Enter the google font you want to use on your site here. If the font name contains spaces just add the space as per the way it is described in the google font directory eg Source Sans pro" />
+			      		
+			      		<field name="headingFont" type="list" default="-1" label="Heading Font Family" description="Sets the font for all heading classes.">
+			      			<option value="Cambria, Georgia, Times, Times New Roman, serif">Cambria, Georgia, Times, Times New Roman, serif</option>
+			      			<option value="Adobe Caslon Pro, Georgia, Garamond, Times, serif">Adobe Caslon Pro, Georgia, Garamond, Times, serif</option>
+			      			<option value="Courier new, Courier, Andale Mono">Courier new, Courier, Andale Mono</option>
+			      			<option value="Garamond, Times New Roman, Times, serif">Garamond, Times New Roman, Times, serif</option>
+			      			<option value="Georgia, Times, ‘Times New Roman’, serif">Georgia, Times, ‘Times New Roman’, serif</option>
+			      			<option value="GillSans, Calibri, Trebuchet, arial sans-serif">GillSans, Calibri, Trebuchet, arial sans-serif</option>
+			      			<option value="sans-serif">Helvetica Neue, Helvetica, Arial, sans-serif</option>
+			      			<option value="Lucida Grande, Geneva, Helvetica, sans-serif">Lucida Grande, Geneva, Helvetica, sans-serif</option>
+			      			<option value="Palatino, Times New Roman, serif">Palatino, Times New Roman, serif</option>
+			      			<option value="Tahoma, Verdana, Geneva">Tahoma, Verdana, Geneva</option>
+			      			<option value="Trebuchet ms, Tahoma, Arial, sans-serif">Trebuchet ms, Tahoma, Arial, sans-serif</option>
+			      			<option value="League Gothic">League Gothic</option>
+			      			<option value="-1">Google Font</option>
+			      		</field> 
+			      		<field name="headingFont_custom" type="text" default="Open+Sans:400,600,300:latin"  size="30"
+			      		  label="Google Font - Heading"
+			      		  description="Enter the google font you want to use on your site here. If the font name contains spaces just add the space as per the way it is described in the google font directory eg Source Sans pro" />
+			      		<field name="navFont" type="list" default="sans-serif" label="Nav Font" description="The font specified here will be applied to the main navigation on the site.">
+			      			<option value="Cambria, Georgia, Times, Times New Roman, serif">Cambria, Georgia, Times, Times New Roman, serif</option>
+			      			<option value="Adobe Caslon Pro, Georgia, Garamond, Times, serif">Adobe Caslon Pro, Georgia, Garamond, Times, serif</option>
+			      			<option value="Courier new, Courier, Andale Mono">Courier new, Courier, Andale Mono</option>
+			      			<option value="Garamond, ‘Times New Roman’, Times, serif">Garamond, ‘Times New Roman’, Times, serif</option>
+			      			<option value="Georgia, Times, ‘Times New Roman’, serif">Georgia, Times, ‘Times New Roman’, serif</option>
+			      			<option value="GillSans, Calibri, Trebuchet, arial sans-serif">GillSans, Calibri, Trebuchet, arial sans-serif</option>
+			      			<option value="sans-serif">Helvetica Neue, Helvetica, Arial, sans-serif</option>
+			      			<option value="Lucida Grande, Geneva, Helvetica, sans-serif">Lucida Grande, Geneva, Helvetica, sans-serif</option>
+			      			<option value="Palatino, ‘Times New Roman’, serif">Palatino, ‘Times New Roman’, serif</option>
+			      			<option value="Tahoma, Verdana, Geneva">Tahoma, Verdana, Geneva</option>
+			      			<option value="Trebuchet ms, Tahoma, Arial, sans-serif">Trebuchet ms, Tahoma, Arial, sans-serif</option>
+			      			<option value="League Gothic">League Gothic</option>
+			      			<option value="-1">Google Font</option>
+			      		</field> 
+			      		<field name="navFont_custom" type="text" default="Open+Sans:400,600,300:latin"  size="30"
+			      		  label="Google Font - Nav"
+			      		  description="Enter the google font you want to use on your site here. If the font name contains spaces just add the space as per the way it is described in the google font directory eg Source Sans pro" />
+			      		  <field type="spacer" name="Custom Fonts" label="Custom Fonts" />
+			      		  <field name="customfontselector" type="text" default="" label="Selector to apply a custom font" filter="raw" description="ZEN_LL_SELECTOR_DESC"/>
+			      		  <field name="customFont" type="list" default="-1" label="Custom Font" description="The font specified here will be applied to the main navigation on the site.">
+			      		  	<option value="Cambria, Georgia, Times, Times New Roman, serif">Cambria, Georgia, Times, Times New Roman, serif</option>
+			      		  	<option value="Adobe Caslon Pro, Georgia, Garamond, Times, serif">Adobe Caslon Pro, Georgia, Garamond, Times, serif</option>
+			      		  	<option value="Courier new, Courier, Andale Mono">Courier new, Courier, Andale Mono</option>
+			      		  	<option value="Garamond, ‘Times New Roman’, Times, serif">Garamond, ‘Times New Roman’, Times, serif</option>
+			      		  	<option value="Georgia, Times, ‘Times New Roman’, serif">Georgia, Times, ‘Times New Roman’, serif</option>
+			      		  	<option value="GillSans, Calibri, Trebuchet, arial sans-serif">GillSans, Calibri, Trebuchet, arial sans-serif</option>
+			      		  	<option value="sans-serif">Helvetica Neue, Helvetica, Arial, sans-serif</option>
+			      		  	<option value="Lucida Grande, Geneva, Helvetica, sans-serif">Lucida Grande, Geneva, Helvetica, sans-serif</option>
+			      		  	<option value="Palatino, ‘Times New Roman’, serif">Palatino, ‘Times New Roman’, serif</option>
+			      		  	<option value="Tahoma, Verdana, Geneva">Tahoma, Verdana, Geneva</option>
+			      		  	<option value="Trebuchet ms, Tahoma, Arial, sans-serif">Trebuchet ms, Tahoma, Arial, sans-serif</option>
+			      		  	<option value="League Gothic">League Gothic</option>
+			      		  	<option value="-1">Google Font</option>
+			      		  	<field name="customFont_custom" type="text" default="Rochester"  size="30"
+			      		  	  label="Google Font - Nav"
+			      		  	  description="Enter the google font you want to use on your site here. If the font name contains spaces just add the space as per the way it is described in the google font directory eg Source Sans pro" />
+			      		  	<field name="customFontCSS" type="textarea" default="" label="CSS to be applied to custom font" description="If you need to apply specific css to this custom font then apply it here. eg color:#fff;font-size:3em."/>
+			      		  </field> 
+				</fieldset>
+				<fieldset name="effects_params" label="Effects" description="">
+					<field name="effects_params_default" type="t3depend" function="@group">
+						<option for="lazyload" value="1">llselector</option>
+						<option for="lazyload" value="1">notllselector</option>
+						<option for="stickynav" value="1">stickynavoffset</option>
+					</field>
+					<field name="lazyload" type="radio" class="btn-group" default="0" label="Lazyload" description="ZEN_LAZYLOAD_DESC">
+							<option value="0">JNO</option>
+							<option value="1">JYES</option>
+					</field>
+					<field name="llselector" type="text" default="img" label="Lazyload Selector" filter="raw" description="ZEN_LL_SELECTOR_DESC"/>
+					<field name="notllselector" type="text" default="" label="Lazyload Not Selector" filter="raw" description="ZEN_NOT_LL_SELECTOR_DESC"/>
+					<field name="backtotop" type="radio" class="btn-group" default="0" label="Back to Top" description="ZEN_BACK_TO_TOP_DESC">
+							<option value="0">JNO</option>
+							<option value="1">JYES</option>
+					</field>
+					<field name="stickynav" type="radio" class="btn-group" default="0" label="Sticky Nav" description="ZEN_STICKY_NAV_DESC">
+							<option value="0">JNO</option>
+							<option value="1">JYES</option>
+					</field>
+					<field name="stickynavoffset" type="text" default="200" label="Stickynav offset" description="The distance fromt he top of the page that the user needs to scroll in order to trigger the sticky nav."/>
+					<field name="openpaneltext" type="text" default="More" label="Open Panel text" filter="raw" description="This setting determines the text used for the open panel text when you have any module piublished to the panel1, panel2, panel3 or panel4 positions."/>
+					
+				</fieldset>
+	
+				<fieldset name="general_params" label="T3V3_GENERAL_LABEL" description="T3V3_GENERAL_DESC">
+					<field name="general_default" type="t3depend" function="@group">
+						<option for="copyright" value="1">customcopyright</option>
+						<option for="loadfiles" value="1">files</option>
+						<option for="loadscripts" value="1">inline-scripts</option>
+						<option for="enableanalytics" value="1">analytics</option>
+						<option for="t3-rmvlogo" value="no">t3-rmvlogo</option>
+					</field>
+					<field name="responsive" type="t3depend" function="@group">
+					     <option for="menu_as_bg" value="no">menu_as_bg</option>
+					    </field>
+					<!-- Extra params added to the general tab -->
+					 <field name="copyright" type="radio" class="btn-group" default="0" label="Remove Copyright" description="Remove Joomlabamboo copyright and add your own?">
+				  		<option value="0">JNO</option>
+				  		<option value="1">JYES</option>
+					</field>
+					<field name="customcopyright" type="textarea" default="" rows="10" cols="5" label="Add custom copyright" filter="raw" description="Enter the custom copyright details for your site. HTML allowed."/>
+					<field name="addcode" type="textarea" default="" rows="10" cols="5" label="Add extra scripts" filter="raw" description="ZEN_ADDCODE_DESC"/>
+					<field name="ZEN_MAINBODY_DISABLED" type="radio" class="btn-group" default="0" description="This option hides any content that will normally render in the main body div including the main content, sidebars, above and below modules for the front page." label="Remove mainbody output from homepage">
+						<option value="0">JNO</option>
+							<option value="1">JYES</option>
+					</field>
+					<field name="ZEN_COMPONENT_DISABLED" type="radio" class="btn-group" default="0" description="This setting will remove only the main content / component area on the front page. Modules such as sidebar, above and below etc will be displayed normally." label="Remove component/article output from homepage">
+						<option value="0">JNO</option>
+							<option value="1">JYES</option>
+					</field>
+				</fieldset>
+			</fields>
+			
+				<!-- Theme Magic settings -->
+						<fields name="thememagic" addfieldpath="/plugins/system/jat3v3/includes/depend">
+			
+						<fieldset name="grid_params" label="T3_TM_GRID">
+						    	<field name="group_disable" type="t3depend" function="@group">
+						     		<option for="T3gridWidth1200" value="no">T3gridWidth1200</option>
+						     		<option for="T3gridWidth" value="no">T3gridWidth</option>
+						     		<option for="gridGutterWidth1200" value="no">gridGutterWidth1200</option>
+						     		<option for="gridGutterWidth" value="no">gridGutterWidth</option>
+						     		<option for="T3gridWidth980" value="no">T3gridWidth980</option>
+						     		<option for="gridGutterWidth980" value="no">gridGutterWidth980</option>
+						     		<option for="T3gridWidth768" value="no">T3gridWidth768</option>
+						     		<option for="gridGutterWidth768" value="no">gridGutterWidth768</option>
+						    	</field>
+						          
+								<field name="basewidth" type="text" default="" label="Template width" description="" class="input-tiny t3tm-dimension" />
+								<field name="navbarCollapseWidth" type="text" default="" label="Navbar collapse width" description="" class="input-tiny t3tm-dimension" />
+								<field name="primary" type="color" class="t3tm-color" default="" label="Primary Colour" description="" />
+								<field name="secondary" type="color" class="t3tm-color" default="" label="Secondary Colour" description="" />
+							</fieldset>
+							
+							<fieldset name="sidebar_appearance_params" label="Sidebar style">     
+								<field name="sidebarBG" type="color" class="t3tm-color" default="" label="Sidebar Colour" description="" />
+								<field name="sidebarHeadings" type="color" class="t3tm-color" default="" label="Sidebar Heading Colour" description="" />
+								<field name="sidebarText" type="color" class="t3tm-color" default="" label="Sidebar Text Colour" description="" />
+								<field name="sidebarlinkcolor" type="color" class="t3tm-color" default="" label="Sidebar link Color" description="" />
+								<field name="sidebarlinkColorActive" type="color" class="t3tm-color" default="" label="Sidebar Hover / Active Link Color" description="" />
+							</fieldset>
+							
+						  	<fieldset name="theme_appearance_params" label="Text, headings and borders">     
+					      		
+					      		<field name="textColor" type="color" class="t3tm-color" default="" label="Text Colour" description="" />
+					        	<field name="headingsColor" type="color" class="t3tm-color" default="" label="Heading Colour" description="" />
+					        	<field name="borderColor" type="color" class="t3tm-color" default="" label="Border Colour" description="" />
+					        	<field name="minorborderColor" type="color" class="t3tm-color" default="" label="Border colour for lists and headings" description="" />
+					        </fieldset>
+					       					        
+					        <fieldset name="navcolor_params" label="Nav Colour">     
+					        	<field name="navbgcolortop" type="color" class="t3tm-color" default="" label="Navbar Colour" description="" />
+					        	<field name="navbarLinkColor" type="color" class="t3tm-color" default="" label="Nav link Colour" description="" />
+					        	<field name="navbarLinkColorHover" type="color" class="t3tm-color" default="" label="Nav Link Hover" description="" />
+					        	<field name="navbarLinkColorActive" type="color" class="t3tm-color" default="" label="Active item colour" description="" />
+					        	<field name="navbarLinkBackgroundActive" type="color" class="t3tm-color" default="" label="Active item background" description="" />
+					        </fieldset>
+					        <fieldset name="dropdown_params" label="Nav Dropdown Colours">     
+					        	<field name="dropdownBackground" type="color" class="t3tm-color" default="" label="Dropdown background" description="" />
+					        	<field name="dropdownColor" type="color" class="t3tm-color" default="" label="Text Colour" description="" />
+					        	<field name="dropdownLinkColor" type="color" class="t3tm-color" default="" label="Link colour" description="" />
+					        	<field name="dropdownLinkColorHover" type="color" class="t3tm-color" default="" label="Link colour hover" description="" />
+					        	<field name="dropdownLinkColorActive" type="color" class="t3tm-color" default="" label="Active link colour" description="" />
+					        	<field name="dropdownLinkBorderColor" type="color" class="t3tm-color" default="" label="Border applied to items in sub menu" description="" />
+					        </fieldset>
+					        <fieldset name="logo_layout_params" label="Logo Size and Colour">
+					        	<field name="logoSize" type="text" default="" label="Logo Size" description="" class="input-tiny t3tm-dimension" />
+					        	<field name="logoColor" type="color" class="t3tm-color" default="" label="Logo Colour (text)" description="" />
+					        	<field name="taglineColor" type="color" class="t3tm-color" default="" label="Tagline Colour" description="" />
+					        	<field name="taglineLeft" type="text" default="" label="Tagline left offset" description="This setting determines the left offset of the tagline. A -ve value here will move the tagline to the left while a +ve value will move it to the right." class="input-tiny t3tm-dimension"/>
+					        	<field name="taglineTop" type="text" default="" label="Tagline top offset" description="This setting determines the left offset of the tagline. A -ve value here will move the tagline up while a +ve value will move it down." class="input-tiny t3tm-dimension" />
+					        </fieldset>
+					        <fieldset name="link_colour_params" label="Link Colours">  
+					        	<field name="linkColor" type="color" class="t3tm-color" default="" label="Link Colour" description="" />
+					        	<field name="linkColorHover" type="color" class="t3tm-color" default="" label="Link Hover Colour" description="" />
+					        	<field name="linkColorActive" type="color" class="t3tm-color" default="" label="Active Link Colour" description="" />
+					        	<field name="btnColor" type="color" class="t3tm-color" default="" label="Button Colour" description="" />
+					        </fieldset>
+						</fields>
+				    </config>
+	<updateservers>
+	   <server type="collection">http://update.joomlart.com/service/tracking/list.xml</server>
+	</updateservers>	
+</extension>

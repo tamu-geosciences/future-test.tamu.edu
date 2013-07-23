@@ -1,0 +1,45 @@
+/* Sidebar
+-----------------------------------------------------------------------------*/
+#main-side {
+
+	float:left;
+	width:100%;
+
+
+	
+	#sidebar-main {
+		margin-top:0px;
+		float:left;
+		width:100%;
+		padding:40px 20px 10px 20px;
+		border-left:4px solid darken(@sidebarBG, 8%);
+		margin-right:-1px;
+		background:@sidebarBG;
+		.border-radius(0 4px 0 0);
+		color:#fff;
+		
+		h1,h2,h3,h4,h5,h6 {color:@sidebarHeadings}
+		
+		
+	}
+	
+
+
+}
+
+.sidebar-1 {margin:0 !important}
+
+body#sidebar-left {
+
+	#side {
+		margin-left:0;
+		
+		#sidebar-main {
+		
+		.border-radius(4px 0 0 4px);
+		border-right:4px solid darken(@sidebarBG, 8%);
+		border-left:0
+		
+		}
+	}
+}

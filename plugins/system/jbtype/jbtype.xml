@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension group="system" method="upgrade" type="plugin" version="1.5">
+	<name>System - JB Type</name>
+	<author>Joomla Bamboo</author>
+	<creationDate>May 15, 2013</creationDate>
+	<copyright>Copyright (c) 2013 Copyright (C), Joomlabamboo. All Rights Reserved.. All rights reserved.</copyright>
+	<license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>design@joomlabamboo.com</authorEmail>
+	<authorUrl>www.joomlabamboo.com</authorUrl>
+	<version>${jb.latest}</version>
+	<description><![CDATA[
+		<p style="line-height:180%;font-size:1.2em">
+			<a href="http://www.joomlabamboo.com/joomla-extensions/jb-type-joomla-typography-plugin">
+				<img alt="JB Type" src="http://d129tlhqmunv45.cloudfront.net/images/stories/blog/icons/JBtype.png?1305337042" style="float:left;margin:0 20px 20px 0px"/></a>JB Type is a Joomla style and typography plugin for your content. By using some simple Joomla syntax you can create some awesome typography for your site without knowing any html at all.</p>]]></description>
+	<files>
+		<filename plugin="jbtype">jbtype.php</filename>
+		<filename plugin="jbtype">jbtype/styles.php</filename>
+		<filename plugin="jbtype">jbtype/index.html</filename>
+	</files>
+	<media destination="jbtype" folder="media/jbtype">
+		<folder>font</folder>
+		<folder>css</folder>
+		<folder>images</folder>
+		<file>index.html</file>
+	</media>
+	<config>
+		<fields addfieldpath="" name="params">
+			<fieldset group="jbtype" label="JB Type Options" name="jbtype">
+				<field default="coquette" description="Select from the available styles." label="Select the style of icons" name="iconStyle" type="list">
+					<option value="coquette">Coquette - dryicons.com</option>
+					<option value="orangesticker">Orange Sticker Icons</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

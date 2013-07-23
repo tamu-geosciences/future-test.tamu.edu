@@ -1,0 +1,282 @@
+@media (min-width: @navbarCollapseWidth){ 
+		.navbar .btn-navbar {display:none}
+}
+
+
+@media (max-width: @navbarCollapseWidth){ 
+		
+	/* Always show Sub Menu option */
+	.always-show .mega > .mega-dropdown-menu,
+	.always-show .dropdown-menu {
+	  display: block !important;
+	}
+	
+	
+	/* Adds space for the fixed position nav on small screens*/
+
+	
+	#navwrap {
+	
+		padding:0 !important;
+	
+		/* Move the main nav to the top of the page*/
+		//position: absolute;
+		
+		//z-index: 10;
+		
+		/* Top position*/
+		//top:0;
+		
+		/* Left position*/
+		//left: 0;
+		
+		/* Top bar bg colour*/
+		//background: @togglemenubg;
+		
+		/* Top bar colour*/
+		//color:@togglemenutext;
+		
+		/* Set the width*/
+		//width: 100%;
+		
+		/* Adjust padding */
+		//padding-bottom: 22px;
+		
+		/* Any heading tags there? */
+		h1,h2,h3,h4,h5,h6 {color:@togglemenutext}
+		
+		
+		.zen-container {
+		
+			/* reset any border*/
+			border: 0;
+			
+			//background: @togglemenubg;
+			
+			/* Apply full width to toggle menu*/
+			//width: 100% !important;
+		}
+		
+		.t3-megamenu .mega-group-ct {background:none;border:0}
+	
+		
+		/* The main button used to toggle the menu*/
+		button {
+		
+			/* Change position to move it out of the main navwrap*/
+			//position: absolute;
+			
+			/* Make it go on top*/
+			//z-index: 100;
+			
+			/* Reset box shadow*/
+			.box-shadow(none);
+		
+			/* Border radius on toggle*/
+			.border-radius(4px);	
+			
+			/* Top positioning on toggle button*/
+			//margin-top: -2px;
+			
+			/* Left positioning on toggle button*/
+			//left: 20px;
+			
+			/* Background on toggle button*/
+			background: @togglemenubuttonbg;
+			
+			/* Colour of toggle button*/
+			color: @togglemenubuttoncolor;
+			
+			/* Remove text shadow*/
+			text-shadow:none;
+			
+			/* Remove border*/
+			border:0;
+			
+			/* left offset */
+			margin-left: 25px;
+			
+			/* Toggle icon font size*/
+			font-size:1.48em;
+			
+			/* Padding around the icon*/
+			padding:@togglemenubuttonpadding;
+			
+			span {display:inline-table}
+			
+				/* Toggle hover*/
+				&:hover {
+					background: none;
+					color: @linkColorHover;
+				}
+		}
+		
+		
+		/* Styles mainly applied if using toggle menu and not off canvas*/
+		
+		.nav-collapse {
+			background: @togglemenubg;
+			width: 100%;
+		}
+		
+		
+		
+		ul.nav {
+		
+			/*  Left positioning of menu*/
+			padding-left:0px;
+			
+			/* Add some positioning above the top menu so we can still click the button*/
+			padding-top: 40px;
+				
+				/*  Top level lists*/	
+				li {
+					
+					width:100%;
+					text-indent:0px;
+				
+					
+					/*  Remove image on parent items */
+					&.dropdown a,
+					&.dropdown .separator,
+					&.dropdown.active a {background:none !important}
+				
+				
+					/*  Top level links*/
+					a,
+					.separator {
+						/*  reset alignments if necessary*/
+						float: left;
+						width: 100%;
+						text-align: left;
+						
+						padding:0;
+						
+					 	
+					 	/* any border radius?*/
+					 	border-radius:0;
+					 	
+					 	/* Reset Margins*/
+					 	margin:0;
+					 	
+					 	/* Colour on links */
+					 	color:@togglemenulinkcolor;
+					 
+					 		/*  Hover colours*/
+						 	&:hover {
+						 		color:@linkColorHover
+						 	}
+					}
+					
+					&.active a {
+						background:none
+					}
+					
+					.dropdown-menu {
+					/* Shadow on drop down menu*/
+						.box-shadow( none);
+					}
+					
+					/*  Second level Menus*/
+					ul {
+						/*  reset some things*/
+						.box-shadow(none);
+						margin:0 !important;
+						padding-top: 10px !important;
+						
+					
+						
+						li {
+							/* Padding on sub levels*/
+							padding: 0;
+							border-bottom: 0;
+							
+							
+							i {margin:0 20px 0 0}
+							
+						
+							a {
+								/* Remove borders on sub level links*/
+								border-bottom: 0;
+								text-indent:10px;
+								color:@togglemenusublinkcolor
+								
+							}
+							
+							&.active a {
+								/* Reset active sub menus*/
+								background: none;
+							}
+						}
+					}
+					
+					/* Soem resets for mega menus*/
+					.nav-child,
+					.mega-inner,
+					.dropdown-menu {padding:0 !important}
+					
+					
+					/* Reset on drop down menu */
+					.dropdown-menu {
+						.border-radius(0px);
+						margin-top: 0px;
+						-webkit-box-shadow: 0;
+					  	-moz-box-shadow: 0;
+					  	box-shadow: 0;
+					}
+
+				}
+
+		}
+	}
+	
+}
+
+
+@media (min-width:@navbarCollapseWidth) and (max-width:979px){ 
+
+	/* We need this to reset the core Bootstrap behaviour*/
+	.nav-collapse .dropdown-menu {
+	    position: absolute;
+	    display: none;
+	    background: @dropdownBackground !important;
+	    position:absolute;top:100%;left:0;z-index:1000;display:none;float:left;min-width:160px;padding:5px 0;margin:2px 0 0;list-style:none;background-color:@white;border:1px solid #ccc;border:1px solid rgba(0, 0, 0, 0.2);*border-right-width:2px;*border-bottom-width:2px;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;-webkit-box-shadow:0 5px 10px rgba(0, 0, 0, 0.2);-moz-box-shadow:0 5px 10px rgba(0, 0, 0, 0.2);box-shadow:0 5px 10px rgba(0, 0, 0, 0.2);-webkit-background-clip:padding-box;-moz-background-clip:padding;background-clip:padding-box;
+	}
+
+}
+
+
+
+@media (min-width: 320px) and (max-width: 759px) {
+	
+	/* Sidebar */
+	.sidebar {
+	
+		ul.nav {
+	
+			float: left;width: 100%;
+	
+			li {float: left;width: 100%}
+
+			li.active.dropdown > a {
+				border-bottom: 1px solid @minorborderColor
+			}
+	
+			li.active > a {
+				padding-left: 0 !important;
+			}
+	
+			li.active li.active a {
+				padding: 0 0 0 12px !important;
+			}
+	
+			li a,
+			ul {
+				float: left;width: 100%;margin: 0 !important
+			}
+	
+		}
+
+	}
+
+}

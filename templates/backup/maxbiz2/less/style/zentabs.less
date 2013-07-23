@@ -1,0 +1,25 @@
+/* Zen Tabs - Module Chrome
+-----------------------------------------------------------------------------*/
+
+#mainWrap  ul.nav.nav-tabs {
+
+
+	padding:0 !important;
+	
+		li {
+			padding:0;
+			.border-radius(4px 0 0 4px);
+			
+			a {
+				
+				&:hover {
+					background:#fff !important;
+					color:@linkColorHover !important
+				}
+			}
+			
+			&.active a {
+				background:@mainContainerBG
+			}
+		}
+}

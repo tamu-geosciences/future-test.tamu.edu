@@ -1,0 +1,67 @@
+/* Colour behind banner
+-----------------------------------------------------------------------------*/
+#bannerwrap {
+
+		float: left;
+		width: 100%;
+		
+		/* Variable for entire bg row */
+		background: @bannerBG;
+		
+		/* Bottom border */
+		border-bottom: @bannerBorderBottom;
+		
+		/* Top border */
+		border-top: @bannerBorderTop;
+		
+		/* banner Text colour */
+		color: @bannertextcolor;
+		
+		
+		a {
+			/* The banner link colour */
+			color: @bannerlinkcolor;
+			
+			&:hover {
+				/* The banner link hover colour */
+				color: @bannerlinkcolorhover;
+			}
+		}
+		
+		h1,h2,h3,h4,h5,h6 {
+			color: @bannerheadingcolor;
+		}
+		
+		
+		.zen-container {
+			
+			/* bg on main banner container */
+			background: @bannerContainerBG;
+			
+			
+			/* banner border */
+			border-banner: @bannerContainerTopBorder;
+			
+			/* Bottom border */
+			border-bottom: @bannerContainerBottomBorder;
+			
+			/* banner padding */
+			padding: @bannerpadding;
+			
+			margin-right:-7%;
+			
+
+			
+		}
+}
+
+#sidebar-left {
+
+	#bannerwrap {
+	
+		.zen-container {
+			margin-right:0;
+			margin-left:0%
+		}
+	}
+}

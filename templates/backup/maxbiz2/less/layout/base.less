@@ -1,0 +1,68 @@
+/* Main Container - renamed from .container to avoid issue with Zentools v1
+-----------------------------------------------------------------------------*/
+.zen-container {
+	max-width: @basewidth;
+	width:100%;
+	margin:0 auto;
+	background: @mainContainerBG;
+	padding: @maincontainerpadding;
+}
+
+
+body:before {
+    content: "";
+    position: fixed;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    z-index: 100;
+    .box-shadow(0px 0px 10px rgba(0,0,0,.3));
+}
+
+
+  
+/* main wrappers.
+-----------------------------------------------------------------------------*/
+#fullwrap {float: left;width: 100%;position:relative;z-index:2}
+
+
+/* A common padding image for some elements
+-----------------------------------------------------------------------------*/
+
+
+
+/* Main grid rows
+-----------------------------------------------------------------------------*/
+#grid1wrap .zen-container,
+#grid2wrap .zen-container,
+#grid3wrap .zen-container,
+#grid4wrap .zen-container,
+#grid5wrap .zen-container,
+#grid6wrap .zen-container,
+#mainWrap  .zen-container{
+
+
+	.simplelist;
+}
+
+
+
+
+/* Colour of main area
+-----------------------------------------------------------------------------*/
+#gradient {
+	float: left;
+	width: 100%;
+	color:@textColor;
+	background: @gradientBackground;
+	
+	.gradient-inner {
+		.border-radius(4px) !important;
+		background:@mainContainerBG;		
+	}
+	
+	> .zen-container {padding:0; background:none}
+	
+	.zen-container {background:none;}
+}
