@@ -12,10 +12,10 @@ class JConfig {
 	public $debug = '0';
 	public $debug_lang = '0';
 	public $dbtype = 'mysql';
-	public $host = 'localhost:3306';
-	public $user = 'root';
-	public $password = 'root';
-	public $db = 'future2013';
+	public $host = 'us-cdbr-east-04.cleardb.com/heroku_36c59252b56a3c7?reconnect=true';
+	public $user = 'b63bb9e656127f';
+	public $password = '1ff3ac9d';
+	public $db = 'heroku_36c59252b56a3c7';
 	public $dbprefix = 'jos_';
 	public $live_site = '';
 	public $secret = 'c48tKCipBYGthSDV';
